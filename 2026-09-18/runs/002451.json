@@ -1,0 +1,889 @@
+{
+  "date": "2026-09-18",
+  "generated_at": "2026-09-18T00:24:51+08:00",
+  "timezone": "Asia/Shanghai",
+  "top_items": [],
+  "idea_items": [],
+  "security_items": [],
+  "all_items": [],
+  "source_results": [
+    {
+      "source": "zhihu",
+      "ok": false,
+      "count": 0,
+      "via": "google-news-rss",
+      "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Azhihu.com+%28AI+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E7%A7%91%E6%8A%80+OR+%E8%8A%AF%E7%89%87+OR+%E8%B4%A2%E7%BB%8F+OR+%E8%82%A1%E5%B8%82+OR+%E5%81%A5%E5%BA%B7+OR+%E5%8C%BB%E7%96%97+OR+%E6%B8%B8%E6%88%8F+OR+%E7%94%B5%E7%AB%9E+OR+%E5%8A%A8%E6%BC%AB+OR+%E5%8A%A8%E7%94%BB%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+      "note": "知乎热榜 API 需登录，改用 Google News site:zhihu.com。; 知乎热榜 API 需登录，改用 Google News site:zhihu.com。; 知乎热榜 API 需登录，改用 Google News site:zhihu.com。"
+    },
+    {
+      "source": "weibo",
+      "ok": false,
+      "count": 0,
+      "via": "google-news-rss",
+      "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Aweibo.com+%28AI+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E7%A7%91%E6%8A%80+OR+%E8%8A%AF%E7%89%87+OR+%E8%B4%A2%E7%BB%8F+OR+%E8%82%A1%E5%B8%82+OR+%E5%81%A5%E5%BA%B7+OR+%E5%8C%BB%E7%96%97+OR+%E6%B8%B8%E6%88%8F+OR+%E7%94%B5%E7%AB%9E+OR+%E5%8A%A8%E6%BC%AB+OR+%E5%8A%A8%E7%94%BB%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+      "note": "微博热搜接口被访客墙拦截，改用 Google News site:weibo.com。; 微博热搜接口被访客墙拦截，改用 Google News site:weibo.com。; 微博热搜接口被访客墙拦截，改用 Google News site:weibo.com。"
+    },
+    {
+      "source": "huxiu",
+      "ok": false,
+      "count": 0,
+      "via": "google-news-rss",
+      "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Ahuxiu.com+%28AI+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E7%A7%91%E6%8A%80+OR+%E8%8A%AF%E7%89%87+OR+%E8%B4%A2%E7%BB%8F+OR+%E8%82%A1%E5%B8%82+OR+%E5%81%A5%E5%BA%B7+OR+%E5%8C%BB%E7%96%97+OR+%E6%B8%B8%E6%88%8F+OR+%E7%94%B5%E7%AB%9E+OR+%E5%8A%A8%E6%BC%AB+OR+%E5%8A%A8%E7%94%BB%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+      "note": "补充 Google News; 补充 Google News; 补充 Google News"
+    },
+    {
+      "source": "woshipm",
+      "ok": false,
+      "count": 0,
+      "via": "google-news-rss",
+      "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Awoshipm.com+%28AI%E7%BC%96%E7%A8%8B+OR+Cursor+OR+Copilot+OR+Codex+OR+%E6%99%BA%E8%83%BD%E4%BD%93+OR+%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+      "note": ""
+    },
+    {
+      "source": "bilibili",
+      "ok": false,
+      "count": 0,
+      "via": "google-news-rss",
+      "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Abilibili.com+%28AI+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E7%A7%91%E6%8A%80+OR+%E8%8A%AF%E7%89%87+OR+%E8%B4%A2%E7%BB%8F+OR+%E8%82%A1%E5%B8%82+OR+%E5%81%A5%E5%BA%B7+OR+%E5%8C%BB%E7%96%97+OR+%E6%B8%B8%E6%88%8F+OR+%E7%94%B5%E7%AB%9E+OR+%E5%8A%A8%E6%BC%AB+OR+%E5%8A%A8%E7%94%BB%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+      "note": ""
+    },
+    {
+      "source": "reuters",
+      "ok": false,
+      "count": 0,
+      "via": "google-news-rss",
+      "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Areuters.com+%28AI+OR+technology+OR+chip+OR+finance+OR+stocks+OR+health+OR+medical+OR+gaming+OR+anime%29+when%3A1d&hl=en-US&gl=US&ceid=US%3Aen (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+      "note": "路透官网与官方 RSS 不可用，改用 Google News site:reuters.com。; 路透官网与官方 RSS 不可用，改用 Google News site:reuters.com。; 路透官网与官方 RSS 不可用，改用 Google News site:reuters.com。"
+    },
+    {
+      "source": "medium",
+      "ok": false,
+      "count": 0,
+      "via": "google-news-rss",
+      "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Amedium.com+%28AI+OR+technology+OR+chip+OR+finance+OR+stocks+OR+health+OR+medical+OR+gaming+OR+anime%29+when%3A1d&hl=en-US&gl=US&ceid=US%3Aen (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+      "note": ""
+    },
+    {
+      "source": "x",
+      "ok": false,
+      "count": 0,
+      "via": "google-news-rss",
+      "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=%28site%3Ax.com+OR+site%3Atwitter.com%29+%28AI+OR+technology+OR+chip+OR+finance+OR+stocks+OR+health+OR+medical+OR+gaming+OR+anime%29+when%3A1d&hl=en-US&gl=US&ceid=US%3Aen (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+      "note": ""
+    },
+    {
+      "source": "github",
+      "ok": false,
+      "count": 0,
+      "via": "github-trending",
+      "error": null,
+      "note": "GitHub 本周趋势暂时不可达"
+    }
+  ],
+  "loop": [
+    {
+      "round": 1,
+      "phase": "plan",
+      "message": "本轮将拉取知乎、微博、虎嗅、人人都是产品经理、B站、路透、Medium、X；优先官方 API/RSS，失败再走抓取或 Google News。人人都是产品经理重点挖掘 AI 编程创意。GitHub 单独整理本周新增星数最高的仓库，AI 相关项目置顶。",
+      "data": {
+        "sources": [
+          "zhihu",
+          "weibo",
+          "huxiu",
+          "woshipm",
+          "bilibili",
+          "reuters",
+          "medium",
+          "x"
+        ],
+        "mcp": "none-official",
+        "cli": "python -m news_briefing"
+      }
+    },
+    {
+      "round": 1,
+      "phase": "observe",
+      "message": "完成首轮抓取。",
+      "data": {
+        "sources": [
+          {
+            "source": "zhihu",
+            "ok": false,
+            "count": 0,
+            "via": "google-news-rss",
+            "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Azhihu.com+%28AI+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E7%A7%91%E6%8A%80+OR+%E8%8A%AF%E7%89%87+OR+%E8%B4%A2%E7%BB%8F+OR+%E8%82%A1%E5%B8%82+OR+%E5%81%A5%E5%BA%B7+OR+%E5%8C%BB%E7%96%97+OR+%E6%B8%B8%E6%88%8F+OR+%E7%94%B5%E7%AB%9E+OR+%E5%8A%A8%E6%BC%AB+OR+%E5%8A%A8%E7%94%BB%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+            "note": "知乎热榜 API 需登录，改用 Google News site:zhihu.com。"
+          },
+          {
+            "source": "weibo",
+            "ok": false,
+            "count": 0,
+            "via": "google-news-rss",
+            "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Aweibo.com+%28AI+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E7%A7%91%E6%8A%80+OR+%E8%8A%AF%E7%89%87+OR+%E8%B4%A2%E7%BB%8F+OR+%E8%82%A1%E5%B8%82+OR+%E5%81%A5%E5%BA%B7+OR+%E5%8C%BB%E7%96%97+OR+%E6%B8%B8%E6%88%8F+OR+%E7%94%B5%E7%AB%9E+OR+%E5%8A%A8%E6%BC%AB+OR+%E5%8A%A8%E7%94%BB%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+            "note": "微博热搜接口被访客墙拦截，改用 Google News site:weibo.com。"
+          },
+          {
+            "source": "huxiu",
+            "ok": false,
+            "count": 0,
+            "via": "google-news-rss",
+            "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Ahuxiu.com+%28AI+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E7%A7%91%E6%8A%80+OR+%E8%8A%AF%E7%89%87+OR+%E8%B4%A2%E7%BB%8F+OR+%E8%82%A1%E5%B8%82+OR+%E5%81%A5%E5%BA%B7+OR+%E5%8C%BB%E7%96%97+OR+%E6%B8%B8%E6%88%8F+OR+%E7%94%B5%E7%AB%9E+OR+%E5%8A%A8%E6%BC%AB+OR+%E5%8A%A8%E7%94%BB%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+            "note": "补充 Google News"
+          },
+          {
+            "source": "woshipm",
+            "ok": false,
+            "count": 0,
+            "via": "google-news-rss",
+            "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Awoshipm.com+%28AI%E7%BC%96%E7%A8%8B+OR+Cursor+OR+Copilot+OR+Codex+OR+%E6%99%BA%E8%83%BD%E4%BD%93+OR+%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+            "note": ""
+          },
+          {
+            "source": "bilibili",
+            "ok": false,
+            "count": 0,
+            "via": "google-news-rss",
+            "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Abilibili.com+%28AI+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E7%A7%91%E6%8A%80+OR+%E8%8A%AF%E7%89%87+OR+%E8%B4%A2%E7%BB%8F+OR+%E8%82%A1%E5%B8%82+OR+%E5%81%A5%E5%BA%B7+OR+%E5%8C%BB%E7%96%97+OR+%E6%B8%B8%E6%88%8F+OR+%E7%94%B5%E7%AB%9E+OR+%E5%8A%A8%E6%BC%AB+OR+%E5%8A%A8%E7%94%BB%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+            "note": ""
+          },
+          {
+            "source": "reuters",
+            "ok": false,
+            "count": 0,
+            "via": "google-news-rss",
+            "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Areuters.com+%28AI+OR+technology+OR+chip+OR+finance+OR+stocks+OR+health+OR+medical+OR+gaming+OR+anime%29+when%3A1d&hl=en-US&gl=US&ceid=US%3Aen (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+            "note": "路透官网与官方 RSS 不可用，改用 Google News site:reuters.com。"
+          },
+          {
+            "source": "medium",
+            "ok": false,
+            "count": 0,
+            "via": "google-news-rss",
+            "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=site%3Amedium.com+%28AI+OR+technology+OR+chip+OR+finance+OR+stocks+OR+health+OR+medical+OR+gaming+OR+anime%29+when%3A1d&hl=en-US&gl=US&ceid=US%3Aen (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+            "note": ""
+          },
+          {
+            "source": "x",
+            "ok": false,
+            "count": 0,
+            "via": "google-news-rss",
+            "error": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=%28site%3Ax.com+OR+site%3Atwitter.com%29+%28AI+OR+technology+OR+chip+OR+finance+OR+stocks+OR+health+OR+medical+OR+gaming+OR+anime%29+when%3A1d&hl=en-US&gl=US&ceid=US%3Aen (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+            "note": ""
+          }
+        ],
+        "item_count": 0,
+        "categories": {
+          "ai": 0,
+          "tech": 0,
+          "finance": 0,
+          "health": 0,
+          "games": 0,
+          "anime": 0
+        }
+      }
+    },
+    {
+      "round": 2,
+      "phase": "think",
+      "message": "发现品类或信源缺口，针对补抓。",
+      "data": {
+        "missing": [
+          "ai",
+          "tech",
+          "finance",
+          "health",
+          "games",
+          "anime"
+        ],
+        "failed": [
+          "zhihu",
+          "weibo",
+          "huxiu",
+          "woshipm",
+          "bilibili",
+          "reuters",
+          "medium",
+          "x"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "phase": "act",
+      "message": "补抓完成。",
+      "data": {
+        "extra_calls": 8,
+        "item_count": 0,
+        "categories": {
+          "ai": 0,
+          "tech": 0,
+          "finance": 0,
+          "health": 0,
+          "games": 0,
+          "anime": 0
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "think",
+      "message": "发现品类或信源缺口，针对补抓。",
+      "data": {
+        "missing": [
+          "ai",
+          "tech",
+          "finance",
+          "health",
+          "games",
+          "anime"
+        ],
+        "failed": [
+          "zhihu",
+          "weibo",
+          "huxiu",
+          "woshipm",
+          "bilibili",
+          "reuters",
+          "medium",
+          "x"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "phase": "act",
+      "message": "补抓完成。",
+      "data": {
+        "extra_calls": 8,
+        "item_count": 0,
+        "categories": {
+          "ai": 0,
+          "tech": 0,
+          "finance": 0,
+          "health": 0,
+          "games": 0,
+          "anime": 0
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "select",
+      "message": "选出当日 Top 0，并整理 AI 编程创意 0 条、安全新闻 0 条、GitHub 周星 0 个、编程题页、热门梗与表情包。",
+      "data": {
+        "top_ids": [],
+        "idea_ids": [],
+        "security_ids": [],
+        "github_ids": [],
+        "coding_daily": null,
+        "coding_contests": 0,
+        "memes": 6,
+        "sticker_packs": 3
+      }
+    },
+    {
+      "round": 3,
+      "phase": "render",
+      "message": "已生成当日网页。",
+      "data": {
+        "html": "D:\\code\\github\\auto-office\\spiderman\\news_output\\2026-09-18\\index.html"
+      }
+    }
+  ],
+  "category_counts": {
+    "ai": 0,
+    "tech": 0,
+    "finance": 0,
+    "health": 0,
+    "games": 0,
+    "anime": 0
+  },
+  "html_path": "D:\\code\\github\\auto-office\\spiderman\\news_output\\2026-09-18\\index.html",
+  "json_path": "D:\\code\\github\\auto-office\\spiderman\\news_output\\2026-09-18\\briefing.json",
+  "coding": {
+    "daily": null,
+    "solutions": [],
+    "contests": [],
+    "bands": [
+      {
+        "id": "intro",
+        "lo": 800,
+        "hi": 1200,
+        "cf_lo": 800,
+        "cf_hi": 1100,
+        "title_zh": "第 1 档 · 入门 800–1200",
+        "title_en": "Band 1 · Intro 800–1200",
+        "why_zh": "对应 LeetCode Easy / 周赛 Q1。先把模拟、哈希、双指针做熟，不要跳档。",
+        "why_en": "LeetCode Easy / Weekly Q1. Arrays, hash maps, two pointers.",
+        "cf_zh": "Codeforces 同档大约 800–1000（Div.2 A / 简单 Div.4）",
+        "cf_en": "Codeforces analog ~800–1000 (Div.2 A)",
+        "problems": [],
+        "cf_problems": []
+      },
+      {
+        "id": "basic",
+        "lo": 1200,
+        "hi": 1400,
+        "cf_lo": 1100,
+        "cf_hi": 1300,
+        "title_zh": "第 2 档 · 基础 1200–1400",
+        "title_en": "Band 2 · Basics 1200–1400",
+        "why_zh": "周赛 Q1 后半到 Q2 前半。开始碰前缀和、滑动窗口、简单二叉树。",
+        "why_en": "Late Easy / early Medium. Prefix sums, sliding window, trees.",
+        "cf_zh": "Codeforces 同档大约 1100–1300（Div.2 A/B）",
+        "cf_en": "Codeforces analog ~1100–1300",
+        "problems": [],
+        "cf_problems": []
+      },
+      {
+        "id": "plus",
+        "lo": 1400,
+        "hi": 1600,
+        "cf_lo": 1300,
+        "cf_hi": 1500,
+        "title_zh": "第 3 档 · 进阶 1400–1600",
+        "title_en": "Band 3 · Intermediate 1400–1600",
+        "why_zh": "典型周赛 Q2。贪心、二分、BFS/DFS、基础 DP。",
+        "why_en": "Weekly Q2. Greedy, binary search, BFS/DFS, intro DP.",
+        "cf_zh": "Codeforces 同档大约 1300–1500（Div.2 B）",
+        "cf_en": "Codeforces analog ~1300–1500",
+        "problems": [],
+        "cf_problems": []
+      },
+      {
+        "id": "mid",
+        "lo": 1600,
+        "hi": 1800,
+        "cf_lo": 1500,
+        "cf_hi": 1700,
+        "title_zh": "第 4 档 · 中等 1600–1800",
+        "title_en": "Band 4 · Medium 1600–1800",
+        "why_zh": "周赛 Q3 起步。图、堆、区间、状态压缩入门。",
+        "why_en": "Weekly Q3. Graphs, heaps, intervals, light bit DP.",
+        "cf_zh": "Codeforces 同档大约 1500–1700（Div.2 C）",
+        "cf_en": "Codeforces analog ~1500–1700",
+        "problems": [],
+        "cf_problems": []
+      },
+      {
+        "id": "hard",
+        "lo": 1800,
+        "hi": 2000,
+        "cf_lo": 1700,
+        "cf_hi": 1900,
+        "title_zh": "第 5 档 · 困难 1800–2000",
+        "title_en": "Band 5 · Hard 1800–2000",
+        "why_zh": "稳的 Q3 / 不稳的 Q4。树形 DP、最短路、并查集变形。",
+        "why_en": "Solid Q3 / early Q4. Tree DP, shortest paths, DSU variants.",
+        "cf_zh": "Codeforces 同档大约 1700–1900（Div.2 C/D）",
+        "cf_en": "Codeforces analog ~1700–1900",
+        "problems": [],
+        "cf_problems": []
+      },
+      {
+        "id": "contest",
+        "lo": 2000,
+        "hi": 2200,
+        "cf_lo": 1900,
+        "cf_hi": 2100,
+        "title_zh": "第 6 档 · 竞赛 2000–2200",
+        "title_en": "Band 6 · Contest 2000–2200",
+        "why_zh": "周赛 Q4 主力区。数据结构、组合、较难 DP。",
+        "why_en": "Weekly Q4. Data structures, combinatorics, harder DP.",
+        "cf_zh": "Codeforces 同档大约 1900–2100（Div.2 D）",
+        "cf_en": "Codeforces analog ~1900–2100",
+        "problems": [],
+        "cf_problems": []
+      },
+      {
+        "id": "peak",
+        "lo": 2200,
+        "hi": 4000,
+        "cf_lo": 2100,
+        "cf_hi": 3500,
+        "title_zh": "第 7 档 · 顶尖 2200+",
+        "title_en": "Band 7 · Peak 2200+",
+        "why_zh": "双周赛 Q4 / 周赛压轴。只在前面几档做稳后再碰。",
+        "why_en": "Biweekly Q4 / weekly finale. Wait until earlier bands are solid.",
+        "cf_zh": "Codeforces 同档大约 2100+（Div.1）",
+        "cf_en": "Codeforces analog ~2100+",
+        "problems": [],
+        "cf_problems": []
+      }
+    ],
+    "hubs": [
+      {
+        "name": "LeetCode 中文",
+        "url": "https://leetcode.cn/problemset/",
+        "kind_zh": "每日一题 / 周赛",
+        "kind_en": "Daily / weekly"
+      },
+      {
+        "name": "LeetCode",
+        "url": "https://leetcode.com/problemset/",
+        "kind_zh": "国际站",
+        "kind_en": "Global site"
+      },
+      {
+        "name": "Zerotrac 评分",
+        "url": "https://zerotrac.github.io/leetcode_problem_rating/",
+        "kind_zh": "题目 Elo",
+        "kind_en": "Problem Elo"
+      },
+      {
+        "name": "Codeforces",
+        "url": "https://codeforces.com/contests",
+        "kind_zh": "比赛 / 题库",
+        "kind_en": "Contests / set"
+      },
+      {
+        "name": "AtCoder",
+        "url": "https://atcoder.jp/contests/",
+        "kind_zh": "ABC / ARC / AGC",
+        "kind_en": "ABC / ARC / AGC"
+      },
+      {
+        "name": "Clist",
+        "url": "https://clist.by/",
+        "kind_zh": "赛历聚合",
+        "kind_en": "Contest calendar"
+      }
+    ],
+    "source_notes": [
+      "cf_contests: HTTPSConnectionPool(host='codeforces.com', port=443): Max retries exceeded with url: /api/contest.list (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+      "cf_problems: HTTPSConnectionPool(host='codeforces.com', port=443): Max retries exceeded with url: /api/problemset.problems (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+      "atcoder: HTTPSConnectionPool(host='kenkoooo.com', port=443): Max retries exceeded with url: /atcoder/resources/contests.json (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))",
+      "zerotrac: HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /zerotrac/leetcode_problem_rating/master/data.json (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=7897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))"
+    ]
+  },
+  "culture": {
+    "memes": [
+      {
+        "id": "sun-yuchen",
+        "title": "孙宇晨 / 磨指甲 / 仅退款文学",
+        "title_en": "Justin Sun / nail-filing / 'refund-only' romance",
+        "summary_zh": "2026年8月，加密圈人物孙宇晨发布长文《我的女友景甜》，把恋爱、彩礼诉讼和大量生活细节写成一篇「仅退款」式叙事。网友迅速拆出「磨指甲」「喊妈妈」等切片，变成跨平台二创模板。本页只解释梗怎么传播，不评判当事人。",
+        "summary_en": "In August 2026 Justin Sun posted a long essay about a celebrity relationship. Internet users clipped details such as 'filing nails' into reusable meme templates. This page explains the meme, not the private dispute.",
+        "tags": [
+          "娱乐",
+          "币圈"
+        ],
+        "url": "https://zh.wikipedia.org/wiki/孙宇晨",
+        "thumb": "",
+        "via": "seed",
+        "hot": false
+      },
+      {
+        "id": "chinese-can-fly",
+        "title": "中国人会飞 / 中国人能飞",
+        "title_en": "Chinese people can fly",
+        "summary_zh": "出自惠州说唱歌手揽佬 2026年7月在美国电台 On The Radar 的 freestyle《中国人能飞》。副歌「中国人能飞，黄皮肤才对」极度洗脑，被配到火箭、战机、游戏高光和日常「上天」画面，还衍生出一套开玩笑的「飞学」。也常被写成「中国人会飞」。",
+        "summary_en": "From rapper Lan Lao's 2026 On The Radar freestyle 'Chinese people can fly'. The hook became a BGM for any clip of someone or something taking off, plus a tongue-in-cheek 'fly theory'.",
+        "tags": [
+          "音乐",
+          "抽象"
+        ],
+        "url": "https://www.bilibili.com/search?keyword=中国人能飞",
+        "thumb": "",
+        "via": "seed",
+        "hot": false
+      },
+      {
+        "id": "opossum-hands",
+        "title": "背手负鼠",
+        "title_en": "Hands-behind-back opossum",
+        "summary_zh": "2026年5月，一张背手、眼神放空的北美负鼠抓拍在中文互联网爆红。体态像在工位发呆的社畜，配上「事情终于有了新的退展」一类文案，成为当年的动物顶流表情包。更早的「斗鸡眼负鼠海蒂」也是同类素材。",
+        "summary_en": "A 2026 photo of an opossum standing with paws behind its back became a Chinese workplace-burnout sticker. It follows earlier viral opossums such as Heidi the cross-eyed opossum.",
+        "tags": [
+          "表情包",
+          "动物"
+        ],
+        "url": "https://commons.wikimedia.org/wiki/Category:Didelphis_virginiana",
+        "thumb": "",
+        "via": "seed",
+        "hot": false
+      },
+      {
+        "id": "only-refund",
+        "title": "仅退款文学",
+        "title_en": "Refund-only literature",
+        "summary_zh": "电商「仅退款」原指退钱不退货。2026年被挪用到情感和公共事件：先深情回忆，再把付出折算成账单，分手就像点「仅退款」。孙宇晨长文是一次集中出圈，但句式本身已经是通用玩法。",
+        "summary_en": "Borrowed from e-commerce 'refund only, no return'. In 2026 it became a joke format for relationships and scandals: narrate the romance, then itemize the bill.",
+        "tags": [
+          "黑话"
+        ],
+        "url": "https://zh.wikipedia.org/wiki/仅退款",
+        "thumb": "",
+        "via": "seed",
+        "hot": false
+      },
+      {
+        "id": "capybara",
+        "title": "卡皮巴拉 / 水豚",
+        "title_en": "Capybara",
+        "summary_zh": "南美最大的啮齿动物，中文互联网里被写成「钝感力」和佛系代言。表情包通常是它泡温泉、发呆或被一堆动物包围，用来表示「我已经不内耗了」。",
+        "summary_en": "The capybara became a Chinese 'low-sensitivity / zen' animal meme: soaking, staring, refusing to panic.",
+        "tags": [
+          "动物"
+        ],
+        "url": "https://zh.wikipedia.org/wiki/水豚",
+        "thumb": "",
+        "via": "seed",
+        "hot": false
+      },
+      {
+        "id": "fancy-penguin",
+        "title": "高雅企鹅",
+        "title_en": "Fancy penguin",
+        "summary_zh": "2025年底走红的一类企鹅表情：挺胸、侧目、走路像在参加晚宴。用来嘲「故作优雅」和社交场合硬撑体面，和后来的背手负鼠一样，都是拿动物演人。",
+        "summary_en": "A late-2025 penguin meme posing as overdressed dignity — used to tease performative elegance.",
+        "tags": [
+          "动物"
+        ],
+        "url": "https://zh.wikipedia.org/wiki/非洲企鹅",
+        "thumb": "",
+        "via": "seed",
+        "hot": false
+      }
+    ],
+    "packs": [
+      {
+        "id": "opossum",
+        "title_zh": "负鼠",
+        "title_en": "Opossum",
+        "why_zh": "当下顶流。背手呆立、装死、斗鸡眼海蒂，都适合当职场/摆烂表情。",
+        "why_en": "The current animal meme. Hands-behind-back, playing dead, Heidi the cross-eyed opossum.",
+        "images": [],
+        "commons": "https://commons.wikimedia.org/w/index.php?search=Opossum&ns6=1"
+      },
+      {
+        "id": "capybara",
+        "title_zh": "卡皮巴拉",
+        "title_en": "Capybara",
+        "why_zh": "佛系钝感力的上一任动物顶流，还在表情包库存里。",
+        "why_en": "The previous zen-animal wave; still a sticker staple.",
+        "images": [],
+        "commons": "https://commons.wikimedia.org/w/index.php?search=Capybara&ns6=1"
+      },
+      {
+        "id": "penguin",
+        "title_zh": "企鹅",
+        "title_en": "Penguin",
+        "why_zh": "「高雅企鹅」那套挺胸侧目，适合吐槽体面人设。",
+        "why_en": "Upright, side-eye penguins used to roast performative class.",
+        "images": [],
+        "commons": "https://commons.wikimedia.org/w/index.php?search=Penguin&ns6=1"
+      }
+    ],
+    "hot_terms": [],
+    "hubs": [
+      {
+        "name": "小鸡词典",
+        "url": "https://jikipedia.com/",
+        "kind_zh": "梗百科",
+        "kind_en": "Slang wiki"
+      },
+      {
+        "name": "萌娘百科",
+        "url": "https://zh.moegirl.org.cn/",
+        "kind_zh": "二次元百科",
+        "kind_en": "Moegirl"
+      },
+      {
+        "name": "中文维基",
+        "url": "https://zh.wikipedia.org/",
+        "kind_zh": "词条",
+        "kind_en": "Wikipedia"
+      },
+      {
+        "name": "Know Your Meme",
+        "url": "https://knowyourmeme.com/",
+        "kind_zh": "英语梗",
+        "kind_en": "EN memes"
+      },
+      {
+        "name": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/",
+        "kind_zh": "可引用图片",
+        "kind_en": "Reusable images"
+      },
+      {
+        "name": "百度热搜",
+        "url": "https://top.baidu.com/board?tab=realtime",
+        "kind_zh": "当下热搜",
+        "kind_en": "Baidu hot"
+      }
+    ]
+  },
+  "github": {
+    "period": "past_week",
+    "items": [],
+    "via": "",
+    "note": "GitHub 本周趋势暂时不可达",
+    "hubs": [
+      {
+        "name": "GitHub Trending",
+        "url": "https://github.com/trending?since=weekly",
+        "kind_zh": "官方本周趋势",
+        "kind_en": "Official weekly trending"
+      },
+      {
+        "name": "Topic · AI",
+        "url": "https://github.com/topics/artificial-intelligence",
+        "kind_zh": "人工智能专题",
+        "kind_en": "AI topic"
+      },
+      {
+        "name": "Topic · LLM",
+        "url": "https://github.com/topics/llm",
+        "kind_zh": "大模型专题",
+        "kind_en": "LLM topic"
+      },
+      {
+        "name": "Topic · Agents",
+        "url": "https://github.com/topics/ai-agents",
+        "kind_zh": "智能体专题",
+        "kind_en": "AI agents topic"
+      }
+    ]
+  },
+  "knowledge": {
+    "wiki": [
+      {
+        "id": "8e3ed2f018e0f823",
+        "title": "readme",
+        "rel": "arkts/readme.md",
+        "suffix": ".md",
+        "editable": true,
+        "mtime": "2024-07-28T17:57:14+08:00",
+        "bytes": 1787,
+        "kind": "wiki"
+      },
+      {
+        "id": "431891fe6ec291c4",
+        "title": "readme",
+        "rel": "arkui/readme.md",
+        "suffix": ".md",
+        "editable": true,
+        "mtime": "2024-09-08T18:47:31+08:00",
+        "bytes": 821,
+        "kind": "wiki"
+      },
+      {
+        "id": "925dc6f491d8a36f",
+        "title": "readme",
+        "rel": "biz_solution/readme.md",
+        "suffix": ".md",
+        "editable": true,
+        "mtime": "2024-08-11T17:46:06+08:00",
+        "bytes": 0,
+        "kind": "wiki"
+      },
+      {
+        "id": "d2c6aeb7f4d44494",
+        "title": "touch事件传播机制",
+        "rel": "biz_solution/touch事件传播机制.md",
+        "suffix": ".md",
+        "editable": true,
+        "mtime": "2024-12-21T09:54:57+08:00",
+        "bytes": 289,
+        "kind": "wiki"
+      },
+      {
+        "id": "4a056a8090f503c0",
+        "title": "多设备适配方案",
+        "rel": "biz_solution/多设备适配方案.md",
+        "suffix": ".md",
+        "editable": true,
+        "mtime": "2024-08-11T17:45:24+08:00",
+        "bytes": 943,
+        "kind": "wiki"
+      },
+      {
+        "id": "bd3e033c30d5c9ad",
+        "title": "工程结构解释",
+        "rel": "biz_solution/工程结构解释.md",
+        "suffix": ".md",
+        "editable": true,
+        "mtime": "2024-08-11T17:45:26+08:00",
+        "bytes": 901,
+        "kind": "wiki"
+      },
+      {
+        "id": "610dcfa79afe33cd",
+        "title": "防抖函数",
+        "rel": "biz_solution/防抖函数.md",
+        "suffix": ".md",
+        "editable": true,
+        "mtime": "2024-12-21T10:01:19+08:00",
+        "bytes": 308,
+        "kind": "wiki"
+      },
+      {
+        "id": "d32c8169ed81b954",
+        "title": "hms_milestone",
+        "rel": "history/hms_milestone.md",
+        "suffix": ".md",
+        "editable": true,
+        "mtime": "2024-07-28T17:57:14+08:00",
+        "bytes": 28,
+        "kind": "wiki"
+      },
+      {
+        "id": "8040939813f7bdd1",
+        "title": "readme",
+        "rel": "readme.md",
+        "suffix": ".md",
+        "editable": true,
+        "mtime": "2024-07-28T17:57:14+08:00",
+        "bytes": 2289,
+        "kind": "wiki"
+      },
+      {
+        "id": "42470b6a852c45d7",
+        "title": "readme",
+        "rel": "samples/readme.md",
+        "suffix": ".md",
+        "editable": true,
+        "mtime": "2024-09-08T20:08:34+08:00",
+        "bytes": 1444,
+        "kind": "wiki"
+      }
+    ],
+    "books": [
+      {
+        "id": "dbab44d3b8f2d486",
+        "title": "彩虹牙刷",
+        "rel": "推理小说/彩虹牙刷.txt",
+        "suffix": ".txt",
+        "editable": true,
+        "mtime": "2026-01-10T23:35:56+08:00",
+        "bytes": 1171683,
+        "kind": "books"
+      },
+      {
+        "id": "8f009b1c43f1af8a",
+        "title": "象之首_白井智之_2023",
+        "rel": "推理小说/象之首_白井智之_2023.epub",
+        "suffix": ".epub",
+        "editable": false,
+        "mtime": "2026-01-11T09:59:16+08:00",
+        "bytes": 1117042,
+        "kind": "books"
+      },
+      {
+        "id": "742a62bdb172a726",
+        "title": "饮啜尸汁[日]白井智之",
+        "rel": "推理小说/饮啜尸汁[日]白井智之.epub",
+        "suffix": ".epub",
+        "editable": false,
+        "mtime": "2026-01-11T10:04:26+08:00",
+        "bytes": 1390675,
+        "kind": "books"
+      }
+    ],
+    "notion": [],
+    "reports": {
+      "daily": {
+        "id": "report-daily-2026-09-18",
+        "kind": "daily",
+        "title_zh": "日报",
+        "title_en": "Daily",
+        "period": "2026-09-18",
+        "lead_zh": "当日信源 · 要点 0 条。",
+        "headlines": [],
+        "wiki": [],
+        "days": 1
+      },
+      "weekly": {
+        "id": "report-weekly-2026-W38",
+        "kind": "weekly",
+        "title_zh": "周报",
+        "title_en": "Weekly",
+        "period": "2026-W38",
+        "lead_zh": "3 天信源 · 要点 16 条 · ai 80、tech 113、finance 43、health 24、games 46、anime 5。",
+        "headlines": [
+          "论坛剧透｜人工智能平台PAI：Agentic AI Infra，加速模型与智能体创新 - zhuanlan.zhihu.com",
+          "#6000元选豆包手机还是其他#",
+          "苹果考虑采用英伟达NVLINK FUSION技术用于服务器芯片连接。",
+          "《原神》薇斯纳角色PV——「『风』行迷踪」",
+          "独家： OpenAI的流氓特工在重大黑客攻击前两个月调查了Hugging Face的弱点",
+          "我的2.0版本：从学生到软件工程师",
+          "我们很高兴地宣布， Ondo Finance的子公司Oasis Pro Markets （一家美国注册经纪自营商）已加入DTCC的基金/服务。Ondo Finance是第一家加入网络的代币化公司，",
+          "公共卫生实验室是我们医疗保健系统的无名英雄。本月，我们非常感谢为保护我们的健康而不懈努力的实验室工作人员。加入我们！ # ThanksPHLabs",
+          "OpenAI关停$200套餐，这款大模型依旧全免费！AgnesCode猛猛蹬",
+          "胡塞武装袭击沙特空军基地 国际油价飙升美股期货跳水",
+          "驯化西瓜：一颗苦涩有毒的野瓜，如何成为世界顶流",
+          "纳斯达克拖累华尔街，因为人工智能放缓担心锤击芯片制造商英伟达",
+          "制定长期企业数据恢复策略",
+          "上市前推动者： MAG 7股票好坏参半：英伟达（ NVDA ）下跌2.3% ，因为人工智能领导者呼吁放慢其最先进和利润丰厚的模型的开发速度（ Alphabet +1.8% ， Amazon -0.4% ， Apple +0.5% ， Meta",
+          "为什么Kuon、Rule of Rose和Killer7永远不会重制",
+          "昼夜节律和健康生活：改善能量和日常健康的自然习惯"
+        ],
+        "wiki": [],
+        "days": 3
+      },
+      "monthly": {
+        "id": "report-monthly-2026-09",
+        "kind": "monthly",
+        "title_zh": "月报",
+        "title_en": "Monthly",
+        "period": "2026-09",
+        "lead_zh": "6 天信源 · 要点 16 条 · ai 194、tech 298、finance 102、health 68、games 96、anime 17。",
+        "headlines": [
+          "论坛剧透｜人工智能平台PAI：Agentic AI Infra，加速模型与智能体创新 - zhuanlan.zhihu.com",
+          "#6000元选豆包手机还是其他#",
+          "苹果考虑采用英伟达NVLINK FUSION技术用于服务器芯片连接。",
+          "《原神》薇斯纳角色PV——「『风』行迷踪」",
+          "独家： OpenAI的流氓特工在重大黑客攻击前两个月调查了Hugging Face的弱点",
+          "我的2.0版本：从学生到软件工程师",
+          "我们很高兴地宣布， Ondo Finance的子公司Oasis Pro Markets （一家美国注册经纪自营商）已加入DTCC的基金/服务。Ondo Finance是第一家加入网络的代币化公司，",
+          "公共卫生实验室是我们医疗保健系统的无名英雄。本月，我们非常感谢为保护我们的健康而不懈努力的实验室工作人员。加入我们！ # ThanksPHLabs",
+          "OpenAI关停$200套餐，这款大模型依旧全免费！AgnesCode猛猛蹬",
+          "胡塞武装袭击沙特空军基地 国际油价飙升美股期货跳水",
+          "驯化西瓜：一颗苦涩有毒的野瓜，如何成为世界顶流",
+          "纳斯达克拖累华尔街，因为人工智能放缓担心锤击芯片制造商英伟达",
+          "制定长期企业数据恢复策略",
+          "上市前推动者： MAG 7股票好坏参半：英伟达（ NVDA ）下跌2.3% ，因为人工智能领导者呼吁放慢其最先进和利润丰厚的模型的开发速度（ Alphabet +1.8% ， Amazon -0.4% ， Apple +0.5% ， Meta",
+          "为什么Kuon、Rule of Rose和Killer7永远不会重制",
+          "昼夜节律和健康生活：改善能量和日常健康的自然习惯"
+        ],
+        "wiki": [],
+        "days": 6
+      },
+      "yearly": {
+        "id": "report-yearly-2026",
+        "kind": "yearly",
+        "title_zh": "年报",
+        "title_en": "Yearly",
+        "period": "2026",
+        "lead_zh": "6 天信源 · 要点 16 条 · ai 194、tech 298、finance 102、health 68、games 96、anime 17。",
+        "headlines": [
+          "论坛剧透｜人工智能平台PAI：Agentic AI Infra，加速模型与智能体创新 - zhuanlan.zhihu.com",
+          "#6000元选豆包手机还是其他#",
+          "苹果考虑采用英伟达NVLINK FUSION技术用于服务器芯片连接。",
+          "《原神》薇斯纳角色PV——「『风』行迷踪」",
+          "独家： OpenAI的流氓特工在重大黑客攻击前两个月调查了Hugging Face的弱点",
+          "我的2.0版本：从学生到软件工程师",
+          "我们很高兴地宣布， Ondo Finance的子公司Oasis Pro Markets （一家美国注册经纪自营商）已加入DTCC的基金/服务。Ondo Finance是第一家加入网络的代币化公司，",
+          "公共卫生实验室是我们医疗保健系统的无名英雄。本月，我们非常感谢为保护我们的健康而不懈努力的实验室工作人员。加入我们！ # ThanksPHLabs",
+          "OpenAI关停$200套餐，这款大模型依旧全免费！AgnesCode猛猛蹬",
+          "胡塞武装袭击沙特空军基地 国际油价飙升美股期货跳水",
+          "驯化西瓜：一颗苦涩有毒的野瓜，如何成为世界顶流",
+          "纳斯达克拖累华尔街，因为人工智能放缓担心锤击芯片制造商英伟达",
+          "制定长期企业数据恢复策略",
+          "上市前推动者： MAG 7股票好坏参半：英伟达（ NVDA ）下跌2.3% ，因为人工智能领导者呼吁放慢其最先进和利润丰厚的模型的开发速度（ Alphabet +1.8% ， Amazon -0.4% ， Apple +0.5% ， Meta",
+          "为什么Kuon、Rule of Rose和Killer7永远不会重制",
+          "昼夜节律和健康生活：改善能量和日常健康的自然习惯"
+        ],
+        "wiki": [],
+        "days": 6
+      }
+    },
+    "roots": {
+      "wiki": "D:\\code\\my_blog",
+      "books": "C:\\Users\\xuhai\\Desktop\\阅读"
+    },
+    "notion_ok": false
+  }
+}

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日信源 Top 10 · 2026-09-08</title>
+  <style>
+    :root {
+      --ink: #161310;
+      --paper: #f3efe4;
+      --panel: #fffdf7;
+      --line: #d9d1c3;
+      --mute: #6e665c;
+      --cinnabar: #9c2b1a;
+      --ok: #2c6e49;
+      --bad: #9c2b1a;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--paper); color: var(--ink); }
+    body {
+      font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", "Noto Serif SC", serif;
+      line-height: 1.5;
+    }
+    a { color: inherit; }
+    header.mast {
+      border-bottom: 3px solid var(--ink);
+      padding: 28px 8vw 18px;
+    }
+    .kicker {
+      letter-spacing: 0.28em;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--cinnabar);
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 54px);
+      margin: 8px 0 0;
+      font-weight: 700;
+    }
+    .sub {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--mute);
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.8fr);
+      gap: 36px;
+      padding: 28px 8vw 64px;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .filter, .chip {
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      background: transparent;
+      padding: 4px 9px;
+      cursor: pointer;
+    }
+    .filter.active { background: var(--ink); color: var(--paper); }
+    .card {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 12px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .rank {
+      font-size: 34px;
+      font-variant-numeric: tabular-nums;
+      color: var(--cinnabar);
+      line-height: 1;
+    }
+    .card h2 {
+      margin: 6px 0 8px;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+    .card h2 a { text-decoration: none; }
+    .card h2 a:hover { text-decoration: underline; }
+    .card p { margin: 0; color: #3d3832; font-size: 15px; }
+    .meta, .foot {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+    }
+    .foot {
+      margin-top: 10px;
+      color: var(--mute);
+      font-size: 12px;
+      justify-content: space-between;
+    }
+    .chip.dim { color: var(--mute); }
+    .go { color: var(--cinnabar); text-decoration: none; }
+    aside {
+      border-left: 1px solid var(--line);
+      padding-left: 24px;
+    }
+    aside h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 12px;
+    }
+    th, td {
+      text-align: left;
+      padding: 6px 4px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    tr.bad td:first-child { color: var(--bad); }
+    tr.ok td:first-child { color: var(--ok); }
+    .loop {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 13px;
+    }
+    .loop li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .phase {
+      display: inline-block;
+      min-width: 52px;
+      color: var(--cinnabar);
+      font-weight: 600;
+    }
+    .round { color: var(--mute); margin-right: 6px; }
+    .note {
+      color: var(--mute);
+      font-size: 13px;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+    }
+    footer {
+      padding: 18px 8vw 40px;
+      color: var(--mute);
+      font-size: 12px;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      border-top: 1px solid var(--line);
+    }
+    .empty { padding: 24px 0; }
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+      aside { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 24px; }
+      .card { grid-template-columns: 48px 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="kicker">Agent Loop Briefing</div>
+    <h1>每日信源 Top 10</h1>
+    <div class="sub">
+      <span>2026-09-08</span>
+      <span>生成于 2026-09-08T08:43:55+08:00</span>
+      <span>Asia/Shanghai</span>
+      <span>候选 243 条</span>
+      <a href="../index.html">历史归档</a>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="filters">
+        <button type="button" class="filter active" data-cat="all">全部</button>
+        <button type="button" class="filter" data-cat="ai">AI 32</button>
+<button type="button" class="filter" data-cat="tech">科技 55</button>
+<button type="button" class="filter" data-cat="finance">财经 18</button>
+<button type="button" class="filter" data-cat="health">健康 6</button>
+<button type="button" class="filter" data-cat="games">游戏娱乐 22</button>
+<button type="button" class="filter" data-cat="anime">动漫 4</button>
+      </div>
+      
+    <article class="card" data-category="ai" data-source="zhihu">
+      <div class="rank">01</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">知乎</span>
+          <span class="chip cat">AI</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-07 16:15</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE80NlB5VjhrV0xmYlZJM2VSMTBaXzVTZWV2dk9PdHRYOGdWVEFqQWt3YjB2R0VtbnptUUR4RUo3UE5tT0ppR2VxVGJBY2ZfU2RUa09IMGtZNS1HVFU5?oc=5" target="_blank" rel="noopener noreferrer">全屋AI成IFA第一趋势，Agent上硬件成行业头等大事</a></h2>
+        <p>全屋AI成IFA第一趋势，Agent上硬件成行业头等大事 知乎</p>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE80NlB5VjhrV0xmYlZJM2VSMTBaXzVTZWV2dk9PdHRYOGdWVEFqQWt3YjB2R0VtbnptUUR4RUo3UE5tT0ppR2VxVGJBY2ZfU2RUa09IMGtZNS1HVFU5?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="tech" data-source="weibo">
+      <div class="rank">02</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">微博</span>
+          <span class="chip cat">科技</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-07 14:04</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNRFJDZVh0Sy1BRkN3QVBUaEtDMzhPYUp1UG9JZ0dDSk1VNXFfRUk4aENlYW1fMFBrODJ4aENUbXBDT3RsMnQ3c0NHTHlNRWxtRVR2WGw0dkVadnNVaGRyZHkwcS0tMElLZ2sxUlJmcUFtYW5takNKczk5V2ttTGliUUJELXVMNTVzTWFtQUMxSWNXbExyZFdLZnZCVXRDaERwT0NCZ2JaT1lOZUlydWF0Y2x4MG1QSVRwWENfRTVn?oc=5" target="_blank" rel="noopener noreferrer">马斯克：AI将占据公司99%的价值，SpaceX须在软硬件上双线取胜</a></h2>
+        <p>马斯克：AI将占据公司99%的价值，SpaceX须在软硬件上双线取胜 微博</p>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNRFJDZVh0Sy1BRkN3QVBUaEtDMzhPYUp1UG9JZ0dDSk1VNXFfRUk4aENlYW1fMFBrODJ4aENUbXBDT3RsMnQ3c0NHTHlNRWxtRVR2WGw0dkVadnNVaGRyZHkwcS0tMElLZ2sxUlJmcUFtYW5takNKczk5V2ttTGliUUJELXVMNTVzTWFtQUMxSWNXbExyZFdLZnZCVXRDaERwT0NCZ2JaT1lOZUlydWF0Y2x4MG1QSVRwWENfRTVn?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="ai" data-source="huxiu">
+      <div class="rank">03</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">虎嗅</span>
+          <span class="chip cat">AI</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-07 22:54</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE5IWm5yeEVabGhMSXNJTTRLb08tUGVQZTZfSFZiZUZWT3VDbTVybWZ6eE5DT1d3bVljYlVtQkFGTjJod1NsYWsycktjQ1dtTGdHODdr?oc=5" target="_blank" rel="noopener noreferrer">“H回A”案例持续涌现，人工智能赛道相关企业正成为“回A”队伍中新的增长极。</a></h2>
+        <p>“H回A”案例持续涌现，人工智能赛道相关企业正成为“回A”队伍中新的增长极。 虎嗅</p>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE5IWm5yeEVabGhMSXNJTTRLb08tUGVQZTZfSFZiZUZWT3VDbTVybWZ6eE5DT1d3bVljYlVtQkFGTjJod1NsYWsycktjQ1dtTGdHODdr?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="tech" data-source="bilibili">
+      <div class="rank">04</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">B站</span>
+          <span class="chip cat">科技</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-06 04:00</span>
+        </div>
+        <h2><a href="https://www.bilibili.com/video/BV1HBbE6cEc5" target="_blank" rel="noopener noreferrer">《下一个是谁》第七季（4）</a></h2>
+        <p>《下一个是谁》第七季来啦！！
+每期都会抽一台iPhone17 Pro！每期抽奖去主投up主（@力元君  ）的主页抽！
+抽奖资金由本期最后一名倒霉蛋出！所以不涉及剧透！</p>
+        <div class="foot">
+          <span>接入：bilibili-api</span>
+          <a class="go" href="https://www.bilibili.com/video/BV1HBbE6cEc5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="tech" data-source="reuters">
+      <div class="rank">05</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">路透社</span>
+          <span class="chip cat">科技</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-07 11:58</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQc2V3MzMyWDhGbmtOTkItcEdzR2dPdHNPelhqSG9sbEw1Mk0xTE85N29vZmtoTnZOa2NpOWFpNF9BSmd5N2EwMDVNOEFWWFlZR2l3SUlSNTdxR2wtT01Kc3RoUmh1bm9xTHBZNjItVXJ0dHZCeHNfX0pRTDBfdlh0QVV0N21fT2ZUZlF1WVFBWW5TejczdUE5MmRkaHpNeGZkTG1zVTlzbw?oc=5" target="_blank" rel="noopener noreferrer">Breakingviews - COMMENTARY: China&#x27;s AI dragons breathe fire on Nvidia&#x27;s moat</a></h2>
+        <p>Breakingviews - COMMENTARY: China&#x27;s AI dragons breathe fire on Nvidia&#x27;s moat Reuters</p>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQc2V3MzMyWDhGbmtOTkItcEdzR2dPdHNPelhqSG9sbEw1Mk0xTE85N29vZmtoTnZOa2NpOWFpNF9BSmd5N2EwMDVNOEFWWFlZR2l3SUlSNTdxR2wtT01Kc3RoUmh1bm9xTHBZNjItVXJ0dHZCeHNfX0pRTDBfdlh0QVV0N21fT2ZUZlF1WVFBWW5TejczdUE5MmRkaHpNeGZkTG1zVTlzbw?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="ai" data-source="medium">
+      <div class="rank">06</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">Medium</span>
+          <span class="chip cat">AI</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-08 00:32</span>
+        </div>
+        <h2><a href="https://vanmassey.medium.com/two-flagships-one-price-tag-the-real-fable-5-1-vs-gpt-6-astra-decision-fb7b28118bc2?source=rss------artificial_intelligence-5" target="_blank" rel="noopener noreferrer">Two Flagships, One Price Tag: The Real Fable 5.1 vs GPT-6 Astra Decision</a></h2>
+        <p>For the first time in the flagship era, the model comparison ends in a tie before it begins. Claude Fable 5.1 (Anthropic, September 1) and… Continue reading on Medium »</p>
+        <div class="foot">
+          <span>接入：medium-rss</span>
+          <a class="go" href="https://vanmassey.medium.com/two-flagships-one-price-tag-the-real-fable-5-1-vs-gpt-6-astra-decision-fb7b28118bc2?source=rss------artificial_intelligence-5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="finance" data-source="x">
+      <div class="rank">07</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">X</span>
+          <span class="chip cat">财经</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-07 22:03</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiP0FVX3lxTE05RG9aT0YxTkRWNHRaQThkZVlfUklSRldjcjUzTkpYc215ckZtVG1FUE5hVTRYb0JZdWkyUFAzWQ?oc=5" target="_blank" rel="noopener noreferrer">Canarinho Finance (@CanarinhoFNC) on X</a></h2>
+        <p>Canarinho Finance (@CanarinhoFNC) on X x.com</p>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiP0FVX3lxTE05RG9aT0YxTkRWNHRaQThkZVlfUklSRldjcjUzTkpYc215ckZtVG1FUE5hVTRYb0JZdWkyUFAzWQ?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="anime" data-source="x">
+      <div class="rank">08</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">X</span>
+          <span class="chip cat">动漫</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-07 23:51</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTFBEeTE0cHUydDhDMmxGS3FreFRnUExXWEFWMGphNl9RRnc3OF9paE9sQVhUd0tMOVhYV0lzZTJHbFh5V0pkZVg3M0VzQVFXZ0lpQWoxdG5oOTVWZF9QcmV2TWJPWQ?oc=5" target="_blank" rel="noopener noreferrer">So an anime image of me quoting a post about doujins is ToS breaking Noticed this happened soon as I started talking about the Lindsay case Can&#x27;t be a coincidence</a></h2>
+        <p>So an anime image of me quoting a post about doujins is ToS breaking Noticed this happened soon as I started talking about the Lindsay case Can&#x27;t be a coincidence x.com</p>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiY0FVX3lxTFBEeTE0cHUydDhDMmxGS3FreFRnUExXWEFWMGphNl9RRnc3OF9paE9sQVhUd0tMOVhYV0lzZTJHbFh5V0pkZVg3M0VzQVFXZ0lpQWoxdG5oOTVWZF9QcmV2TWJPWQ?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="games" data-source="x">
+      <div class="rank">09</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">X</span>
+          <span class="chip cat">游戏娱乐</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-07 12:57</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9kUmNzVUJKUlJrTkJPRVhUX0pCSEtwV1liamhJSjNIREZ1OTZHdGdiUzVyNkFvNkJYeVZCbFpSZ1VMUk9mTFRpYmZZZE1rZzNMa0E5TXVHWThOUGZ5NTVGVg?oc=5" target="_blank" rel="noopener noreferrer">GPT-6 Astra + Higgsfield = AGI in gaming Meet Higgsfield Games 2.0 powered by GPT-6 Astra Build and deploy multiplayer open-world games from one prompt, in any genre, 2D or 3D, with best-in-class characters, props, and settings generated by Higgsfield.</a></h2>
+        <p>GPT-6 Astra + Higgsfield = AGI in gaming Meet Higgsfield Games 2.0 powered by GPT-6 Astra Build and deploy multiplayer open-world games from one prompt, in any genre, 2D or 3D, with best-in-class characters, props, and settings generated by Higgsfield. x.com</p>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9kUmNzVUJKUlJrTkJPRVhUX0pCSEtwV1liamhJSjNIREZ1OTZHdGdiUzVyNkFvNkJYeVZCbFpSZ1VMUk9mTFRpYmZZZE1rZzNMa0E5TXVHWThOUGZ5NTVGVg?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="finance" data-source="medium">
+      <div class="rank">10</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">Medium</span>
+          <span class="chip cat">财经</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-07 22:13</span>
+        </div>
+        <h2><a href="https://medium.com/@wutainfofu/a-unified-api-for-global-cross-asset-market-data-practical-guide-for-stocks-forex-indices-3644f9130602?source=rss------finance-5" target="_blank" rel="noopener noreferrer">A Unified API for Global Cross-Asset Market Data: Practical Guide for Stocks, Forex, Indices…</a></h2>
+        <p>A while ago I needed to build a small cross-asset monitoring tool to view HK stocks, US stocks, forex, gold and Bitcoin together. Continue reading on Medium »</p>
+        <div class="foot">
+          <span>接入：medium-rss</span>
+          <a class="go" href="https://medium.com/@wutainfofu/a-unified-api-for-global-cross-asset-market-data-practical-guide-for-stocks-forex-indices-3644f9130602?source=rss------finance-5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+      
+    </section>
+    <aside>
+      <h3>信源健康</h3>
+      <p class="note">无官方 MCP。CLI 入口为 <code>python -m news_briefing</code>。直连失败的站点会退回 Google News 或页面解析。</p>
+      <table>
+        <thead><tr><th>信源</th><th>区</th><th>条</th><th>通道</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr class="ok">
+              <td>知乎</td>
+              <td>国内</td>
+              <td>40</td>
+              <td>google-news-rss</td>
+              <td>知乎热榜 API 需登录，改用 Google News site:zhihu.com。 query=AI OR 人工智能 OR 科技 OR 芯片 OR 财经 OR 股市 OR 健康 OR 医疗 OR 游戏 OR 电竞 OR 动漫 OR 动画</td>
+            </tr>
+<tr class="ok">
+              <td>微博</td>
+              <td>国内</td>
+              <td>40</td>
+              <td>google-news-rss</td>
+              <td>微博热搜接口被访客墙拦截，改用 Google News site:weibo.com。 query=AI OR 人工智能 OR 科技 OR 芯片 OR 财经 OR 股市 OR 健康 OR 医疗 OR 游戏 OR 电竞 OR 动漫 OR 动画</td>
+            </tr>
+<tr class="ok">
+              <td>虎嗅</td>
+              <td>国内</td>
+              <td>40</td>
+              <td>huxiu-nuxt+google-news</td>
+              <td>虎嗅首页未找到 NUXT 数据；query=AI OR 人工智能 OR 科技 OR 芯片 OR 财经 OR 股市 OR 健康 OR 医疗 OR 游戏 OR 电竞 OR 动漫 OR 动画</td>
+            </tr>
+<tr class="ok">
+              <td>B站</td>
+              <td>国内</td>
+              <td>40</td>
+              <td>bilibili-api</td>
+              <td>B 站官方 popular/ranking 接口</td>
+            </tr>
+<tr class="ok">
+              <td>路透社</td>
+              <td>国外</td>
+              <td>40</td>
+              <td>google-news-rss</td>
+              <td>路透官网与官方 RSS 不可用，改用 Google News site:reuters.com。</td>
+            </tr>
+<tr class="ok">
+              <td>Medium</td>
+              <td>国外</td>
+              <td>40</td>
+              <td>medium-rss</td>
+              <td>Medium 官方 tag RSS</td>
+            </tr>
+<tr class="ok">
+              <td>X</td>
+              <td>国外</td>
+              <td>40</td>
+              <td>google-news-rss</td>
+              <td>X 无公开 CLI/MCP，使用 Google News 检索 x.com / twitter.com</td>
+            </tr>
+        </tbody>
+      </table>
+      <h3 style="margin-top:28px">Agent Loop</h3>
+      <ol class="loop">
+        <li>
+              <span class="phase">plan</span>
+              <span class="round">R1</span>
+              <span>本轮将拉取知乎、微博、虎嗅、B站、路透、Medium、X；优先官方 API/RSS，失败再走抓取或 Google News。</span>
+            </li>
+<li>
+              <span class="phase">observe</span>
+              <span class="round">R1</span>
+              <span>完成首轮抓取。</span>
+            </li>
+<li>
+              <span class="phase">think</span>
+              <span class="round">R2</span>
+              <span>覆盖已足够，停止补抓。</span>
+            </li>
+<li>
+              <span class="phase">select</span>
+              <span class="round">R3</span>
+              <span>选出当日 Top 10。</span>
+            </li>
+      </ol>
+    </aside>
+  </main>
+  <footer>
+    覆盖信源：路透社、虎嗅、知乎、X、Medium、B站、微博。每次运行写入当日目录，并在 runs/ 下保留本次快照。
+  </footer>
+  <script>
+    const buttons = document.querySelectorAll(".filter");
+    const cards = document.querySelectorAll(".card");
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const cat = btn.dataset.cat;
+        cards.forEach((card) => {
+          card.style.display = (cat === "all" || card.dataset.category === cat) ? "" : "none";
+        });
+      });
+    });
+  </script>
+</body>
+</html>

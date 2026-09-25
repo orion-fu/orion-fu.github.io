@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日信源 Top 10 · 2026-09-08</title>
+  <style>
+    :root {
+      --ink: #161310;
+      --paper: #f3efe4;
+      --panel: #fffdf7;
+      --line: #d9d1c3;
+      --mute: #6e665c;
+      --cinnabar: #9c2b1a;
+      --ok: #2c6e49;
+      --bad: #9c2b1a;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--paper); color: var(--ink); }
+    body {
+      font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", "Noto Serif SC", serif;
+      line-height: 1.5;
+    }
+    a { color: inherit; }
+    header.mast {
+      border-bottom: 3px solid var(--ink);
+      padding: 28px 8vw 18px;
+    }
+    .kicker {
+      letter-spacing: 0.28em;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--cinnabar);
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 54px);
+      margin: 8px 0 0;
+      font-weight: 700;
+    }
+    .sub {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--mute);
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.8fr);
+      gap: 36px;
+      padding: 28px 8vw 64px;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .filter, .chip {
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      background: transparent;
+      padding: 4px 9px;
+      cursor: pointer;
+    }
+    .filter.active { background: var(--ink); color: var(--paper); }
+    .card {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 12px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .rank {
+      font-size: 34px;
+      font-variant-numeric: tabular-nums;
+      color: var(--cinnabar);
+      line-height: 1;
+    }
+    .card h2 {
+      margin: 6px 0 8px;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+    .card h2 a { text-decoration: none; }
+    .card h2 a:hover { text-decoration: underline; }
+    .card p { margin: 0; color: #3d3832; font-size: 15px; }
+    .meta, .foot {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+    }
+    .foot {
+      margin-top: 10px;
+      color: var(--mute);
+      font-size: 12px;
+      justify-content: space-between;
+    }
+    .chip.dim { color: var(--mute); }
+    .go { color: var(--cinnabar); text-decoration: none; }
+    aside {
+      border-left: 1px solid var(--line);
+      padding-left: 24px;
+    }
+    aside h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 12px;
+    }
+    th, td {
+      text-align: left;
+      padding: 6px 4px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    tr.bad td:first-child { color: var(--bad); }
+    tr.ok td:first-child { color: var(--ok); }
+    .loop {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 13px;
+    }
+    .loop li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .phase {
+      display: inline-block;
+      min-width: 52px;
+      color: var(--cinnabar);
+      font-weight: 600;
+    }
+    .round { color: var(--mute); margin-right: 6px; }
+    .note {
+      color: var(--mute);
+      font-size: 13px;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+    }
+    footer {
+      padding: 18px 8vw 40px;
+      color: var(--mute);
+      font-size: 12px;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      border-top: 1px solid var(--line);
+    }
+    .empty { padding: 24px 0; }
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+      aside { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 24px; }
+      .card { grid-template-columns: 48px 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="kicker">Agent Loop Briefing</div>
+    <h1>每日信源 Top 10</h1>
+    <div class="sub">
+      <span>2026-09-08</span>
+      <span>生成于 2026-09-08T23:02:36+08:00</span>
+      <span>Asia/Shanghai</span>
+      <span>候选 239 条</span>
+      <a href="../index.html">历史归档</a>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="filters">
+        <button type="button" class="filter active" data-cat="all">全部</button>
+        <button type="button" class="filter" data-cat="ai">AI 26</button>
+<button type="button" class="filter" data-cat="tech">科技 57</button>
+<button type="button" class="filter" data-cat="finance">财经 19</button>
+<button type="button" class="filter" data-cat="health">健康 13</button>
+<button type="button" class="filter" data-cat="games">游戏娱乐 16</button>
+<button type="button" class="filter" data-cat="anime">动漫 2</button>
+      </div>
+      
+    <article class="card" data-category="games" data-source="zhihu">
+      <div class="rank">01</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">知乎</span>
+          <span class="chip cat">游戏娱乐</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 09:41</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBHbEJ4MjlteU9FUDJLOWJTMkhKVC1rbEdSOXRwOWVONVU5YTdHRjllSWIxM2NaMzlxM0RuZC1YNUdWXzgxRjNSdlJCQVlxVmN3MkNuT3pkMFVkaU5B?oc=5" target="_blank" rel="noopener noreferrer">玩赛车游戏选什么电竞显示器最好？答案就是爱攻AGP497UCZD</a></h2>
+        <p>玩赛车游戏选什么电竞显示器最好？答案就是爱攻AGP497UCZD 知乎</p>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBHbEJ4MjlteU9FUDJLOWJTMkhKVC1rbEdSOXRwOWVONVU5YTdHRjllSWIxM2NaMzlxM0RuZC1YNUdWXzgxRjNSdlJCQVlxVmN3MkNuT3pkMFVkaU5B?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="tech" data-source="weibo">
+      <div class="rank">02</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">微博</span>
+          <span class="chip cat">科技</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 15:00</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1CRVBlYzZGUFJGMlIwcTRIaEphQmdJeWJCTVllNnJEbFdIQ0ZvUXV1dEVLM00zc21udUd4ZlFuUzJXLWdvRGN4aWJxRzhUR2M1UFVWcDJOMHZTcTNYT243OW5GZ0FvR3Jv?oc=5" target="_blank" rel="noopener noreferrer">小米 MiMo X ​</a></h2>
+        <p>小米 MiMo X ​ 微博</p>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1CRVBlYzZGUFJGMlIwcTRIaEphQmdJeWJCTVllNnJEbFdIQ0ZvUXV1dEVLM00zc21udUd4ZlFuUzJXLWdvRGN4aWJxRzhUR2M1UFVWcDJOMHZTcTNYT243OW5GZ0FvR3Jv?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="tech" data-source="huxiu">
+      <div class="rank">03</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">虎嗅</span>
+          <span class="chip cat">科技</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 13:53</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1CemN1X2x3U3BnQWhtTEFWcDRwWmg0WjRrODlFRGsyNWhyLUE5YTFnd3pUTW5VRHNhT1VxbGphRWR3bVJ1TnBFdWo4eFRoX3Foa0NR?oc=5" target="_blank" rel="noopener noreferrer">高通与亚马逊合作开发AI推理芯片和1.6T光连接，打入全球云计算生态链</a></h2>
+        <p>高通与亚马逊合作开发AI推理芯片和1.6T光连接，打入全球云计算生态链 虎嗅网</p>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1CemN1X2x3U3BnQWhtTEFWcDRwWmg0WjRrODlFRGsyNWhyLUE5YTFnd3pUTW5VRHNhT1VxbGphRWR3bVJ1TnBFdWo4eFRoX3Foa0NR?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="games" data-source="bilibili">
+      <div class="rank">04</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">B站</span>
+          <span class="chip cat">游戏娱乐</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 10:06</span>
+        </div>
+        <h2><a href="https://www.bilibili.com/video/BV1sHb56xEhC" target="_blank" rel="noopener noreferrer">【2026LPL第三赛段】9月8日 LGD vs IG</a></h2>
+        <p>【2026LPL第三赛段】9月8日 LGD vs IG</p>
+        <div class="foot">
+          <span>接入：bilibili-api</span>
+          <a class="go" href="https://www.bilibili.com/video/BV1sHb56xEhC" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="tech" data-source="reuters">
+      <div class="rank">05</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">路透社</span>
+          <span class="chip cat">科技</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-08 14:38</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxPZl80VFZ2VnoyVGhIdk1HaHpWdzVuTFZRNWdhdXBaU0JxMy1HY3d0aXV4bHZUNFIxSS1TMWVpVVM0UDZqWFlTY2VuZEFzaW40UzZmZGJ4d1d6emVGOHZ1em1ycUJSOUIxM05DN3NzNlJObXpmYTJaZ2JMOGp1bGNib20yZUZibDJTMjNvSnNvWVRseE5QT3o5OTVMV3NVUHFr?oc=5" target="_blank" rel="noopener noreferrer">Qualcomm strikes AI chip deal with Amazon, offers right to buy about $4 billion in stock</a></h2>
+        <p>Qualcomm strikes AI chip deal with Amazon, offers right to buy about $4 billion in stock Reuters</p>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMioAFBVV95cUxPZl80VFZ2VnoyVGhIdk1HaHpWdzVuTFZRNWdhdXBaU0JxMy1HY3d0aXV4bHZUNFIxSS1TMWVpVVM0UDZqWFlTY2VuZEFzaW40UzZmZGJ4d1d6emVGOHZ1em1ycUJSOUIxM05DN3NzNlJObXpmYTJaZ2JMOGp1bGNib20yZUZibDJTMjNvSnNvWVRseE5QT3o5OTVMV3NVUHFr?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="health" data-source="x">
+      <div class="rank">06</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">X</span>
+          <span class="chip cat">健康</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-08 14:50</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE85Y0RNcVVCZkNSQkNHWTlPZ3FTaWJQWVBsbG1rUE9xbVBoMExkcnZnbnFacU1yTnNLZnUxVVFWWkNvdWJaZEZqWnR1S0F2Z0NaWmlQS3l2SDBqVEotMUt0cUVYUQ?oc=5" target="_blank" rel="noopener noreferrer">Radio 2 legend shares sad health update amid prostate cancer treatment: &#x27;I was in tears&#x27; https://t.co/rx0cvVGQQq</a></h2>
+        <p>Radio 2 legend shares sad health update amid prostate cancer treatment: &#x27;I was in tears&#x27; https://t.co/rx0cvVGQQq x.com</p>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE85Y0RNcVVCZkNSQkNHWTlPZ3FTaWJQWVBsbG1rUE9xbVBoMExkcnZnbnFacU1yTnNLZnUxVVFWWkNvdWJaZEZqWnR1S0F2Z0NaWmlQS3l2SDBqVEotMUt0cUVYUQ?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="ai" data-source="medium">
+      <div class="rank">07</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">Medium</span>
+          <span class="chip cat">AI</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-08 14:45</span>
+        </div>
+        <h2><a href="https://medium.com/@27anamikadey/can-you-trust-ai-answers-7-ways-chatgpt-and-gemini-get-it-wrong-8eeece183a79?source=rss------artificial_intelligence-5" target="_blank" rel="noopener noreferrer">Can You Trust AI Answers? 7 Ways ChatGPT and Gemini Get It Wrong</a></h2>
+        <p>Originally published on TechSunNews.com Continue reading on Medium »</p>
+        <div class="foot">
+          <span>接入：medium-rss</span>
+          <a class="go" href="https://medium.com/@27anamikadey/can-you-trust-ai-answers-7-ways-chatgpt-and-gemini-get-it-wrong-8eeece183a79?source=rss------artificial_intelligence-5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="finance" data-source="reuters">
+      <div class="rank">08</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">路透社</span>
+          <span class="chip cat">财经</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-08 12:48</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQTkQyZERqYnVfdnBjajUtTFJ6OE1YT3dZbkhfRHU0MHdRb003eFVnQjJpWHYwekJaR0NSLUdGWDVKZ0pVRzJZLXpXdjRmM2V2SVNpeVByQ3RsOHN6SEUxaV80WHFxZHp2bEJfS3hLUHFvbl9ENkFTWjZnWktvTzktOVk5enBfWkdMVFJldTJn?oc=5" target="_blank" rel="noopener noreferrer">Five spots to watch as the bond market creeps up on 5%</a></h2>
+        <p>Five spots to watch as the bond market creeps up on 5% Reuters</p>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQTkQyZERqYnVfdnBjajUtTFJ6OE1YT3dZbkhfRHU0MHdRb003eFVnQjJpWHYwekJaR0NSLUdGWDVKZ0pVRzJZLXpXdjRmM2V2SVNpeVByQ3RsOHN6SEUxaV80WHFxZHp2bEJfS3hLUHFvbl9ENkFTWjZnWktvTzktOVk5enBfWkdMVFJldTJn?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="anime" data-source="medium">
+      <div class="rank">09</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">Medium</span>
+          <span class="chip cat">动漫</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-08 14:28</span>
+        </div>
+        <h2><a href="https://medium.com/@sapna.dahiiya.2004/mca-extends-ccfs-2026-to-15-september-2026-what-companies-should-do-before-the-deadline-856b5af58c9a?source=rss------finance-5" target="_blank" rel="noopener noreferrer">MCA Extends CCFS-2026 to 15 September 2026: What Companies Should Do Before the Deadline</a></h2>
+        <p>The Ministry of Corporate Affairs (MCA) has further extended the validity of the Companies Compliance Facilitation Scheme, 2026… Continue reading on Medium »</p>
+        <div class="foot">
+          <span>接入：medium-rss</span>
+          <a class="go" href="https://medium.com/@sapna.dahiiya.2004/mca-extends-ccfs-2026-to-15-september-2026-what-companies-should-do-before-the-deadline-856b5af58c9a?source=rss------finance-5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="card" data-category="health" data-source="medium">
+      <div class="rank">10</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">Medium</span>
+          <span class="chip cat">健康</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-08 14:48</span>
+        </div>
+        <h2><a href="https://medium.com/@ncollege679/breaking-into-healthcare-why-medical-assistant-and-phlebotomy-programs-in-los-angeles-are-booming-00b61012fa31?source=rss------health-5" target="_blank" rel="noopener noreferrer">Breaking Into Healthcare: Why Medical Assistant and Phlebotomy Programs in Los Angeles Are Booming</a></h2>
+        <p>The healthcare industry in Los Angeles is expanding at an unprecedented rate. For job seekers looking to enter a stable, rewarding field… Continue reading on Medium »</p>
+        <div class="foot">
+          <span>接入：medium-rss</span>
+          <a class="go" href="https://medium.com/@ncollege679/breaking-into-healthcare-why-medical-assistant-and-phlebotomy-programs-in-los-angeles-are-booming-00b61012fa31?source=rss------health-5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+    </article>
+    
+      
+    </section>
+    <aside>
+      <h3>信源健康</h3>
+      <p class="note">无官方 MCP。CLI 入口为 <code>python -m news_briefing</code>。直连失败的站点会退回 Google News 或页面解析。</p>
+      <table>
+        <thead><tr><th>信源</th><th>区</th><th>条</th><th>通道</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr class="ok">
+              <td>知乎</td>
+              <td>国内</td>
+              <td>40</td>
+              <td>google-news-rss</td>
+              <td>知乎热榜 API 需登录，改用 Google News site:zhihu.com。 query=AI OR 人工智能 OR 科技 OR 芯片 OR 财经 OR 股市 OR 健康 OR 医疗 OR 游戏 OR 电竞 OR 动漫 OR 动画</td>
+            </tr>
+<tr class="ok">
+              <td>微博</td>
+              <td>国内</td>
+              <td>40</td>
+              <td>google-news-rss</td>
+              <td>微博热搜接口被访客墙拦截，改用 Google News site:weibo.com。 query=AI OR 人工智能 OR 科技 OR 芯片 OR 财经 OR 股市 OR 健康 OR 医疗 OR 游戏 OR 电竞 OR 动漫 OR 动画</td>
+            </tr>
+<tr class="ok">
+              <td>虎嗅</td>
+              <td>国内</td>
+              <td>40</td>
+              <td>huxiu-nuxt+google-news</td>
+              <td>虎嗅首页未找到 NUXT 数据；query=AI OR 人工智能 OR 科技 OR 芯片 OR 财经 OR 股市 OR 健康 OR 医疗 OR 游戏 OR 电竞 OR 动漫 OR 动画</td>
+            </tr>
+<tr class="ok">
+              <td>B站</td>
+              <td>国内</td>
+              <td>30</td>
+              <td>bilibili-api</td>
+              <td>B 站官方 popular/ranking 接口</td>
+            </tr>
+<tr class="ok">
+              <td>路透社</td>
+              <td>国外</td>
+              <td>40</td>
+              <td>google-news-rss</td>
+              <td>路透官网与官方 RSS 不可用，改用 Google News site:reuters.com。</td>
+            </tr>
+<tr class="ok">
+              <td>Medium</td>
+              <td>国外</td>
+              <td>40</td>
+              <td>medium-rss</td>
+              <td>Medium 官方 tag RSS</td>
+            </tr>
+<tr class="ok">
+              <td>X</td>
+              <td>国外</td>
+              <td>40</td>
+              <td>google-news-rss</td>
+              <td>X 无公开 CLI/MCP，使用 Google News 检索 x.com / twitter.com</td>
+            </tr>
+        </tbody>
+      </table>
+      <h3 style="margin-top:28px">Agent Loop</h3>
+      <ol class="loop">
+        <li>
+              <span class="phase">plan</span>
+              <span class="round">R1</span>
+              <span>本轮将拉取知乎、微博、虎嗅、B站、路透、Medium、X；优先官方 API/RSS，失败再走抓取或 Google News。</span>
+            </li>
+<li>
+              <span class="phase">observe</span>
+              <span class="round">R1</span>
+              <span>完成首轮抓取。</span>
+            </li>
+<li>
+              <span class="phase">think</span>
+              <span class="round">R2</span>
+              <span>覆盖已足够，停止补抓。</span>
+            </li>
+<li>
+              <span class="phase">select</span>
+              <span class="round">R3</span>
+              <span>选出当日 Top 10。</span>
+            </li>
+      </ol>
+    </aside>
+  </main>
+  <footer>
+    覆盖信源：路透社、虎嗅、知乎、X、Medium、B站、微博。每次运行写入当日目录，并在 runs/ 下保留本次快照。
+  </footer>
+  <script>
+    const buttons = document.querySelectorAll(".filter");
+    const cards = document.querySelectorAll(".card");
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const cat = btn.dataset.cat;
+        cards.forEach((card) => {
+          card.style.display = (cat === "all" || card.dataset.category === cat) ? "" : "none";
+        });
+      });
+    });
+  </script>
+</body>
+</html>

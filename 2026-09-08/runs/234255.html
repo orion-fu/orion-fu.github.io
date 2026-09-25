@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日信源 Top 10 · 2026-09-08</title>
+  <style>
+    :root {
+      --ink: #161310;
+      --paper: #f3efe4;
+      --panel: #fffdf7;
+      --line: #d9d1c3;
+      --mute: #6e665c;
+      --cinnabar: #9c2b1a;
+      --ok: #2c6e49;
+      --bad: #9c2b1a;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--paper); color: var(--ink); }
+    body {
+      font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", "Noto Serif SC", serif;
+      line-height: 1.5;
+    }
+    a { color: inherit; }
+    header.mast {
+      border-bottom: 3px solid var(--ink);
+      padding: 28px 8vw 18px;
+    }
+    .kicker {
+      letter-spacing: 0.28em;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--cinnabar);
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 54px);
+      margin: 8px 0 0;
+      font-weight: 700;
+    }
+    .sub {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--mute);
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.8fr);
+      gap: 36px;
+      padding: 28px 8vw 64px;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .filter, .chip {
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      background: transparent;
+      padding: 4px 9px;
+      cursor: pointer;
+    }
+    .filter.active { background: var(--ink); color: var(--paper); }
+    .card {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr) 96px;
+      gap: 12px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: start;
+    }
+    .rank {
+      font-size: 34px;
+      font-variant-numeric: tabular-nums;
+      color: var(--cinnabar);
+      line-height: 1;
+    }
+    .card h2 {
+      margin: 6px 0 8px;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+    .card h2 a { text-decoration: none; }
+    .card h2 a:hover { text-decoration: underline; }
+    .card p { margin: 0 0 8px; color: #3d3832; font-size: 15px; }
+    .en-title, .en-summary {
+      font-family: "Segoe UI", "Iowan Old Style", serif;
+      color: var(--mute);
+      font-size: 14px;
+    }
+    .en-title { font-style: italic; margin-top: -4px; }
+    .spoken {
+      margin-top: 8px;
+      padding: 10px 12px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: stretch;
+    }
+    .act {
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 12px;
+      border: 1px solid var(--ink);
+      background: var(--paper);
+      color: var(--ink);
+      padding: 8px 6px;
+      cursor: pointer;
+    }
+    .act.play { background: var(--ink); color: var(--paper); }
+    .act.playing { background: var(--cinnabar); border-color: var(--cinnabar); color: var(--paper); }
+    .section-title {
+      margin: 28px 0 8px;
+      font-size: 22px;
+    }
+    .section-note {
+      color: var(--mute);
+      font-size: 13px;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      margin: 0 0 8px;
+    }
+    .meta, .foot {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+    }
+    .foot {
+      margin-top: 10px;
+      color: var(--mute);
+      font-size: 12px;
+      justify-content: space-between;
+    }
+    .chip.dim { color: var(--mute); }
+    .go { color: var(--cinnabar); text-decoration: none; }
+    aside {
+      border-left: 1px solid var(--line);
+      padding-left: 24px;
+    }
+    aside h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 12px;
+    }
+    th, td {
+      text-align: left;
+      padding: 6px 4px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    tr.bad td:first-child { color: var(--bad); }
+    tr.ok td:first-child { color: var(--ok); }
+    .loop {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      font-size: 13px;
+    }
+    .loop li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .phase {
+      display: inline-block;
+      min-width: 52px;
+      color: var(--cinnabar);
+      font-weight: 600;
+    }
+    .round { color: var(--mute); margin-right: 6px; }
+    .note {
+      color: var(--mute);
+      font-size: 13px;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+    }
+    footer {
+      padding: 18px 8vw 40px;
+      color: var(--mute);
+      font-size: 12px;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      border-top: 1px solid var(--line);
+    }
+    .empty { padding: 24px 0; }
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+      aside { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 24px; }
+      .card { grid-template-columns: 48px 1fr; }
+      .actions { grid-column: 1 / -1; flex-direction: row; }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="kicker">Agent Loop Briefing</div>
+    <h1>每日信源 Top 10</h1>
+    <div class="sub">
+      <span>2026-09-08</span>
+      <span>生成于 2026-09-08T23:42:55+08:00</span>
+      <span>Asia/Shanghai</span>
+      <span>候选 254 条</span>
+      <a href="../index.html">历史归档</a>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2 class="section-title">今日要闻 Top 10</h2>
+      <div class="filters">
+        <button type="button" class="filter active" data-cat="all">全部</button>
+        <button type="button" class="filter" data-cat="ai">AI 28</button>
+<button type="button" class="filter" data-cat="tech">科技 66</button>
+<button type="button" class="filter" data-cat="finance">财经 21</button>
+<button type="button" class="filter" data-cat="health">健康 10</button>
+<button type="button" class="filter" data-cat="games">游戏娱乐 17</button>
+<button type="button" class="filter" data-cat="anime">动漫 2</button>
+      </div>
+      <div id="news-list">
+      
+    <article class="card" data-kind="news" data-id="c0958d5486ccab16" data-category="tech" data-source="zhihu">
+      <div class="rank">01</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">知乎</span>
+          <span class="chip cat">科技</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 09:49</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE45X2Z4eE12TU1MRVAxeFhZNGx5N19KQzdqSHU1cnZoekNwZ1paMmU4dTNtd3JMeVo1VktJcHc3eUZvb21EMWZQX2I0bFBoZHNWbnVaMm53V3M1bjAy?oc=5" target="_blank" rel="noopener noreferrer">华为麒麟芯片简史</a></h2>
+        
+        <p>华为麒麟芯片简史 知乎</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE45X2Z4eE12TU1MRVAxeFhZNGx5N19KQzdqSHU1cnZoekNwZ1paMmU4dTNtd3JMeVo1VktJcHc3eUZvb21EMWZQX2I0bFBoZHNWbnVaMm53V3M1bjAy?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="c0958d5486ccab16">生成摘要</button>
+        <button type="button" class="act play" data-id="c0958d5486ccab16" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="news" data-id="8d850f2ba67b0796" data-category="tech" data-source="weibo">
+      <div class="rank">02</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">微博</span>
+          <span class="chip cat">科技</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 15:00</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1CRVBlYzZGUFJGMlIwcTRIaEphQmdJeWJCTVllNnJEbFdIQ0ZvUXV1dEVLM00zc21udUd4ZlFuUzJXLWdvRGN4aWJxRzhUR2M1UFVWcDJOMHZTcTNYT243OW5GZ0FvR3Jv?oc=5" target="_blank" rel="noopener noreferrer">小米 MiMo X ​</a></h2>
+        
+        <p>小米 MiMo X ​ 微博</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1CRVBlYzZGUFJGMlIwcTRIaEphQmdJeWJCTVllNnJEbFdIQ0ZvUXV1dEVLM00zc21udUd4ZlFuUzJXLWdvRGN4aWJxRzhUR2M1UFVWcDJOMHZTcTNYT243OW5GZ0FvR3Jv?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="8d850f2ba67b0796">生成摘要</button>
+        <button type="button" class="act play" data-id="8d850f2ba67b0796" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="news" data-id="689d08f86a2ff227" data-category="tech" data-source="huxiu">
+      <div class="rank">03</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">虎嗅</span>
+          <span class="chip cat">科技</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 13:53</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1CemN1X2x3U3BnQWhtTEFWcDRwWmg0WjRrODlFRGsyNWhyLUE5YTFnd3pUTW5VRHNhT1VxbGphRWR3bVJ1TnBFdWo4eFRoX3Foa0NR?oc=5" target="_blank" rel="noopener noreferrer">高通与亚马逊合作开发AI推理芯片和1.6T光连接，打入全球云计算生态链</a></h2>
+        
+        <p>高通与亚马逊合作开发AI推理芯片和1.6T光连接，打入全球云计算生态链 虎嗅网</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1CemN1X2x3U3BnQWhtTEFWcDRwWmg0WjRrODlFRGsyNWhyLUE5YTFnd3pUTW5VRHNhT1VxbGphRWR3bVJ1TnBFdWo4eFRoX3Foa0NR?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="689d08f86a2ff227">生成摘要</button>
+        <button type="button" class="act play" data-id="689d08f86a2ff227" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="news" data-id="b254c8c79885ceb9" data-category="ai" data-source="woshipm">
+      <div class="rank">04</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">人人都是产品经理</span>
+          <span class="chip cat">AI</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 08:49</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://www.woshipm.com/operate/6461664.html" target="_blank" rel="noopener noreferrer">Codex重置的真正原因找到了，这套打法产品人都该学</a></h2>
+        
+        <p>Codex频繁重置额度，表面是故障补偿，实则已成营销利器。五个月36次重置，六成与Bug无关，而是配合增长节点、竞品危机与个人IP造势。本文拆解Tibo如何将售后动作转化为事件营销，让每次重置都成为召回用户、推广功能、承接迁移的契机，揭示产品增长的新思路。 Codex为什么隔三差五就重置额度？ 最常见的解释是：产品出了故障，OpenAI把额度退给用户。Tibo在访谈中也是这么说的。他手里甚至真有一颗实体按钮，遇到Bug、体验不达标，就按一下作为补偿。 但我统计了今年4月至8月的公开记录，发现故障补偿只占四成。剩下六成，发生在用户量突破、新功能上线，或者T</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：woshipm-rss</span>
+          <a class="go" href="https://www.woshipm.com/operate/6461664.html" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="b254c8c79885ceb9">生成摘要</button>
+        <button type="button" class="act play" data-id="b254c8c79885ceb9" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="news" data-id="a964be557b43295f" data-category="games" data-source="bilibili">
+      <div class="rank">05</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">B站</span>
+          <span class="chip cat">游戏娱乐</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 10:06</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://www.bilibili.com/video/BV1sHb56xEhC" target="_blank" rel="noopener noreferrer">【2026LPL第三赛段】9月8日 LGD vs IG</a></h2>
+        
+        <p>【2026LPL第三赛段】9月8日 LGD vs IG</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：bilibili-api</span>
+          <a class="go" href="https://www.bilibili.com/video/BV1sHb56xEhC" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="a964be557b43295f">生成摘要</button>
+        <button type="button" class="act play" data-id="a964be557b43295f" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="news" data-id="1dec0876e331aab7" data-category="health" data-source="x">
+      <div class="rank">06</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">X</span>
+          <span class="chip cat">健康</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-08 14:50</span>
+          <span class="chip dim">中英</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE85Y0RNcVVCZkNSQkNHWTlPZ3FTaWJQWVBsbG1rUE9xbVBoMExkcnZnbnFacU1yTnNLZnUxVVFWWkNvdWJaZEZqWnR1S0F2Z0NaWmlQS3l2SDBqVEotMUt0cUVYUQ?oc=5" target="_blank" rel="noopener noreferrer">Radio 2 legend shares sad health update amid prostate cancer treatment: &#x27;I was in tears&#x27; https://t.co/rx0cvVGQQq</a></h2>
+        
+        
+        <p class="en-summary">Radio 2 legend shares sad health update amid prostate cancer treatment: &#x27;I was in tears&#x27; https://t.co/rx0cvVGQQq x.com</p>
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE85Y0RNcVVCZkNSQkNHWTlPZ3FTaWJQWVBsbG1rUE9xbVBoMExkcnZnbnFacU1yTnNLZnUxVVFWWkNvdWJaZEZqWnR1S0F2Z0NaWmlQS3l2SDBqVEotMUt0cUVYUQ?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="1dec0876e331aab7">生成摘要</button>
+        <button type="button" class="act play" data-id="1dec0876e331aab7" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="news" data-id="04646a7e8522395a" data-category="finance" data-source="medium">
+      <div class="rank">07</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">Medium</span>
+          <span class="chip cat">财经</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-08 15:18</span>
+          <span class="chip dim">中英</span>
+        </div>
+        <h2><a href="https://medium.com/@Cosmodrome-eng./hyperliquid-from-gas-token-to-nasdaq-954c680ef26b?source=rss------finance-5" target="_blank" rel="noopener noreferrer">Hyperliquid. From Gas Token to Nasdaq</a></h2>
+        
+        
+        <p class="en-summary">How an Offshore Crypto Asset Got Legitimized Through America’s Stock Market Infrastructure Continue reading on Medium »</p>
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：medium-rss</span>
+          <a class="go" href="https://medium.com/@Cosmodrome-eng./hyperliquid-from-gas-token-to-nasdaq-954c680ef26b?source=rss------finance-5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="04646a7e8522395a">生成摘要</button>
+        <button type="button" class="act play" data-id="04646a7e8522395a" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="news" data-id="585132eb8591801d" data-category="anime" data-source="medium">
+      <div class="rank">08</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">Medium</span>
+          <span class="chip cat">动漫</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-08 15:02</span>
+          <span class="chip dim">中英</span>
+        </div>
+        <h2><a href="https://medium.com/@amitsinghchauhan1oa/building-finrag-architecture-retrieval-engineering-and-lessons-from-500-active-users-fdc5d4616709?source=rss------finance-5" target="_blank" rel="noopener noreferrer">Building FinRAG: Architecture, Retrieval Engineering, and Lessons from 500+ Active Users</a></h2>
+        
+        
+        <p class="en-summary">Just passed 500+ active users on FinRAG. Continue reading on Medium »</p>
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：medium-rss</span>
+          <a class="go" href="https://medium.com/@amitsinghchauhan1oa/building-finrag-architecture-retrieval-engineering-and-lessons-from-500-active-users-fdc5d4616709?source=rss------finance-5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="585132eb8591801d">生成摘要</button>
+        <button type="button" class="act play" data-id="585132eb8591801d" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="news" data-id="64151fa1e3c9a98f" data-category="health" data-source="x">
+      <div class="rank">09</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">X</span>
+          <span class="chip cat">健康</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-08 13:00</span>
+          <span class="chip dim">中英</span>
+        </div>
+        <h2><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5PSlNFZFpPUnIxclpyOW5qdGotOEp4VDgwVjJ2dHo4Mm5Vd0k2bUxSLV9zSlFDcUtoLTM1RUwxNjJCZHRPWW9qbXFVdkpvWXNPSm1FaUhuZzhMWEVFLWdnb21hN3JhYzQ?oc=5" target="_blank" rel="noopener noreferrer">Help your kids make healthy food choices at school. Fruits, vegetables, whole grains and water provide the nutrition they need to stay energized and focused in the classroom. Check out more #BackToSchool health tips here: https://t.co/hx5m6Dyngu</a></h2>
+        
+        
+        <p class="en-summary">Help your kids make healthy food choices at school. Fruits, vegetables, whole grains and water provide the nutrition they need to stay energized and focused in the classroom. Check out more #BackToSchool health tips here: https://t.co/hx5m6Dyngu x.com</p>
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：google-news-rss</span>
+          <a class="go" href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5PSlNFZFpPUnIxclpyOW5qdGotOEp4VDgwVjJ2dHo4Mm5Vd0k2bUxSLV9zSlFDcUtoLTM1RUwxNjJCZHRPWW9qbXFVdkpvWXNPSm1FaUhuZzhMWEVFLWdnb21hN3JhYzQ?oc=5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="64151fa1e3c9a98f">生成摘要</button>
+        <button type="button" class="act play" data-id="64151fa1e3c9a98f" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="news" data-id="6e1bdae103dc4790" data-category="health" data-source="medium">
+      <div class="rank">10</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">Medium</span>
+          <span class="chip cat">健康</span>
+          <span class="chip dim">国外</span>
+          <span class="chip dim">09-08 15:40</span>
+          <span class="chip dim">中英</span>
+        </div>
+        <h2><a href="https://medium.com/@glorywellnesscentre/reclaim-your-health-strength-confidence-2bf8b757e1c2?source=rss------health-5" target="_blank" rel="noopener noreferrer">Reclaim Your Health, Strength &amp; Confidence</a></h2>
+        
+        
+        <p class="en-summary">Continue reading on Medium »</p>
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：medium-rss</span>
+          <a class="go" href="https://medium.com/@glorywellnesscentre/reclaim-your-health-strength-confidence-2bf8b757e1c2?source=rss------health-5" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="6e1bdae103dc4790">生成摘要</button>
+        <button type="button" class="act play" data-id="6e1bdae103dc4790" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+      
+      </div>
+      <h2 class="section-title">AI 编程创意 Top 10</h2>
+      <p class="section-note">来自人人都是产品经理，按 AI 编程 / Agent / 代码助手相关热度整理。</p>
+      <div id="idea-list">
+      
+    <article class="card" data-kind="idea" data-id="1bfeaaea520252f1" data-category="ai" data-source="woshipm">
+      <div class="rank">01</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">人人都是产品经理</span>
+          <span class="chip cat">AI</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 06:01</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://www.woshipm.com/ai/6461531.html" target="_blank" rel="noopener noreferrer">DeepSeek Harness 到底能干啥？六个玩法，从干活到好玩</a></h2>
+        
+        <p>harness 不只是写代码，它把“写、跑、看、改”做成闭环。从十分钟搭网站、自动分析销售表，到跨文件追 bug、跑自动化任务，六个真实玩法展示了 AI 编程落地后的提效边界与适用场景。 这篇不讲功能，讲能干出来的东西。六个玩法，从省半天活的实用派，到十分钟做个游戏的好玩派，都是我自己试过的。每个都说清楚：原来要多久、现在要多久、什么活适合扔给它。 01 十分钟搭个网站 这个是我自己的真实经历。 装好 harness 以后，我顺手让它给自己做了个介绍网站——就是讲讲它能干什么、有什么特性。原本以为怎么也得调半天，结果十分钟出来，UI 还挺好看。 harn</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：woshipm-rss</span>
+          <a class="go" href="https://www.woshipm.com/ai/6461531.html" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="1bfeaaea520252f1">生成摘要</button>
+        <button type="button" class="act play" data-id="1bfeaaea520252f1" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="idea" data-id="b254c8c79885ceb9" data-category="ai" data-source="woshipm">
+      <div class="rank">02</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">人人都是产品经理</span>
+          <span class="chip cat">AI</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 08:49</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://www.woshipm.com/operate/6461664.html" target="_blank" rel="noopener noreferrer">Codex重置的真正原因找到了，这套打法产品人都该学</a></h2>
+        
+        <p>Codex频繁重置额度，表面是故障补偿，实则已成营销利器。五个月36次重置，六成与Bug无关，而是配合增长节点、竞品危机与个人IP造势。本文拆解Tibo如何将售后动作转化为事件营销，让每次重置都成为召回用户、推广功能、承接迁移的契机，揭示产品增长的新思路。 Codex为什么隔三差五就重置额度？ 最常见的解释是：产品出了故障，OpenAI把额度退给用户。Tibo在访谈中也是这么说的。他手里甚至真有一颗实体按钮，遇到Bug、体验不达标，就按一下作为补偿。 但我统计了今年4月至8月的公开记录，发现故障补偿只占四成。剩下六成，发生在用户量突破、新功能上线，或者T</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：woshipm-rss</span>
+          <a class="go" href="https://www.woshipm.com/operate/6461664.html" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="b254c8c79885ceb9">生成摘要</button>
+        <button type="button" class="act play" data-id="b254c8c79885ceb9" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="idea" data-id="8562318606801a43" data-category="ai" data-source="woshipm">
+      <div class="rank">03</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">人人都是产品经理</span>
+          <span class="chip cat">AI</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 11:06</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://www.woshipm.com/ai/6461756.html" target="_blank" rel="noopener noreferrer">DeepSeek突然上新！V4.1 Flash开启内测：新架构+原生多模态，直指V4 Pro？</a></h2>
+        
+        <p>DeepSeek 又更新了。 今天下午，DeepSeek 在官方交流群宣布， DeepSeek V4.1 Flash 中间版本正式开启内测 。 按照官方给出的信息，这次 V4.1 Flash 并不是简单调参，而是 采用了新的模型结构 ，并且原生支持多模态。DeepSeek 对新模型的描述也非常直接： 能力更强、速度更快，同时成本更低。 目前开发者已经可以通过 API 抢先体验。 调用时无需修改原来的 base_url ，只需要把模型名称改为： deepseek-v4.1-flash-expires-on-0910 即可使用。 目前的 API 计费与 De</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：woshipm-rss</span>
+          <a class="go" href="https://www.woshipm.com/ai/6461756.html" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="8562318606801a43">生成摘要</button>
+        <button type="button" class="act play" data-id="8562318606801a43" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="idea" data-id="7bb439baa59d5cb0" data-category="ai" data-source="woshipm">
+      <div class="rank">04</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">人人都是产品经理</span>
+          <span class="chip cat">AI</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">时间未知</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://www.woshipm.com/ai/6461646.html" target="_blank" rel="noopener noreferrer">再这样下去，Agent要被卖保健品了</a></h2>
+        
+        <p>暂无摘要，点击标题阅读原文。</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：woshipm-ai-category</span>
+          <a class="go" href="https://www.woshipm.com/ai/6461646.html" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="7bb439baa59d5cb0">生成摘要</button>
+        <button type="button" class="act play" data-id="7bb439baa59d5cb0" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="idea" data-id="aebe7c92eadfb202" data-category="tech" data-source="woshipm">
+      <div class="rank">05</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">人人都是产品经理</span>
+          <span class="chip cat">科技</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 09:37</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://www.woshipm.com/ai/6461734.html" target="_blank" rel="noopener noreferrer">小米MiMo Desktop开放邀测：腾讯、阿里、字节又多了一个对手</a></h2>
+        
+        <p>刚刚，小米 MiMo 团队把 Xiaomi MiMo Desktop（下称 MiMo Desktop）的邀测闸门打开了，同时甩出两款新一代模型的预览版：MiMo-X-Pro-Preview 和 MiMo-X-Flash-Preview。我最大的感受是——这次小米几乎没谈跑分，所有话术都压在”交付”两个字上。这其实是个信号：桌面 Agent 的竞争，正在从”答得对不对”转向”能不能把活干完”。 document.createElement(&#x27;video&#x27;); https://www.woshipm.com/wp-content/uploads/2026/0</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：woshipm-rss</span>
+          <a class="go" href="https://www.woshipm.com/ai/6461734.html" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="aebe7c92eadfb202">生成摘要</button>
+        <button type="button" class="act play" data-id="aebe7c92eadfb202" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="idea" data-id="ad9fdbb12315f28d" data-category="finance" data-source="woshipm">
+      <div class="rank">06</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">人人都是产品经理</span>
+          <span class="chip cat">财经</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">时间未知</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://www.woshipm.com/ai/6461634.html" target="_blank" rel="noopener noreferrer">英伟达花 129 亿美元买下 Hugging Face，最值钱的是它背后的开发者网络</a></h2>
+        
+        <p>暂无摘要，点击标题阅读原文。</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：woshipm-ai-category</span>
+          <a class="go" href="https://www.woshipm.com/ai/6461634.html" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="ad9fdbb12315f28d">生成摘要</button>
+        <button type="button" class="act play" data-id="ad9fdbb12315f28d" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="idea" data-id="c5f9e85b161250d1" data-category="games" data-source="woshipm">
+      <div class="rank">07</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">人人都是产品经理</span>
+          <span class="chip cat">游戏娱乐</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 02:47</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://www.woshipm.com/ai/6460986.html" target="_blank" rel="noopener noreferrer">生成速度跑赢播放速度，AI内容为何死磕“实时”门槛？</a></h2>
+        
+        <p>AI视频生成速度首次超越播放速度，实时交互成为可能。从无限直播间到互动剧情游戏，内容生产逻辑正被改写。本文探讨技术突破背后的产品变革，以及质量、成本、安全等落地挑战，揭示AI视频从工具向实时媒介跃迁的关键节点。 过去两年，AI视频虽然迭代速度飞快，但生成模式都是一致的。用户输入提示词、提交任务、等待渲染，然后获得视频成片，行业最直观的进步，通常体现在画质、时长、人物一致性和声音同步上。 现在，这种大家习以为常的生产模式可能要发生变化了。不久前，X平台上冒出一个没有主播、没有节目单、也没有台本的直播间。上一秒还是六十年代风格的复古木偶广告，下一秒切到街头实</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：woshipm-rss</span>
+          <a class="go" href="https://www.woshipm.com/ai/6460986.html" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="c5f9e85b161250d1">生成摘要</button>
+        <button type="button" class="act play" data-id="c5f9e85b161250d1" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="idea" data-id="3772e7887bc9fc31" data-category="tech" data-source="woshipm">
+      <div class="rank">08</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">人人都是产品经理</span>
+          <span class="chip cat">科技</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 07:48</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://www.woshipm.com/share/6461323.html" target="_blank" rel="noopener noreferrer">一文读懂 HarmonyOS 7.0 带来的十大重要升级（一）</a></h2>
+        
+        <p>HarmonyOS 7.0 正式发布，带来多项新特性，从 ArkUI 的文本选择增强到 ArkWeb 的模拟点击检测，再到音视频解码、相机原图获取等能力升级。本文结合《鸿蒙HarmonyOS 6应用开发》一书，逐一解析这些新特性，帮助开发者快速上手新版本。 HarmonyOS 7.0 已于 2026 年 9 月 7 日正式发布，该版本在 HarmonyOS 6.1 基础上增强了若干特性，让鸿蒙系统变得更智能更好用，下面结合《鸿蒙HarmonyOS 6应用开发:从零基础到App上线》一书对 HarmonyOS 7.0 新特性中的常用部分逐一讲解。这个系列文</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：woshipm-rss</span>
+          <a class="go" href="https://www.woshipm.com/share/6461323.html" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="3772e7887bc9fc31">生成摘要</button>
+        <button type="button" class="act play" data-id="3772e7887bc9fc31" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="idea" data-id="aa9c1c1d245ce51e" data-category="ai" data-source="woshipm">
+      <div class="rank">09</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">人人都是产品经理</span>
+          <span class="chip cat">AI</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 02:46</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://www.woshipm.com/ai/6461475.html" target="_blank" rel="noopener noreferrer">阿里前总参谋长曾鸣万字访谈总结，关于 AI 未来的 42 个判断</a></h2>
+        
+        <p>AI 正在从工具层渗透到组织与协作方式，曾鸣教授关于 AI 产业三阶段与 Agent 应用爆发的判断，为创业者提供了观察变化的坐标。本文结合 GPT-6 Astra 的发布，梳理了从基础设施到完整任务的关键推演，帮助你在技术跃迁中守住真正的产品价值。 上周，我花了两个多小时看完张小珺对曾鸣教授的访谈。其中关于 AI 产业和未来组织的讨论，让我很有感触 最近，我们公司内部正在推进一个大型 AI 产品项目，核心团队只有五个人，其中两个产品、三个研发。项目很大，核心团队很小，周期比过去更短，沟通环节变少了，每个人承担的职责也在扩大。这不能证明未来所有 AI 项</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：woshipm-rss</span>
+          <a class="go" href="https://www.woshipm.com/ai/6461475.html" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="aa9c1c1d245ce51e">生成摘要</button>
+        <button type="button" class="act play" data-id="aa9c1c1d245ce51e" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+
+    <article class="card" data-kind="idea" data-id="0ee62bfd8921749e" data-category="ai" data-source="woshipm">
+      <div class="rank">10</div>
+      <div class="body">
+        <div class="meta">
+          <span class="chip source">人人都是产品经理</span>
+          <span class="chip cat">AI</span>
+          <span class="chip dim">国内</span>
+          <span class="chip dim">09-08 08:44</span>
+          <span class="chip dim">中文</span>
+        </div>
+        <h2><a href="https://www.woshipm.com/ai/6461603.html" target="_blank" rel="noopener noreferrer">奥特曼、李飞飞、张一鸣齐押注，3D世界成AI竞赛新战场</a></h2>
+        
+        <p>过去一周，OpenAI、Anthropic、World Labs与字节跳动密集发布可实时交互的3D空间方案。三条技术路线殊途同归：内容产业正转向可进入、可交互的空间，张一鸣也亲自下场协调资源。 生成式AI的竞争，正在从图片、短视频等平面内容，快速延伸到更具想象空间的三维世界。 过去一周，四场重磅发布接连落地，三条技术底色完全不同的路线，不约而同在同一个方向上重兵集结——可实时交互的3D空间。 9月1日，Anthropic推出新一代旗舰Claude Fable 5.1，同一天李飞飞创办的 World Labs发布新一代原生世界模型Atlas。 9月3日，O</p>
+        
+        <div class="spoken" hidden></div>
+        <div class="foot">
+          <span>接入：woshipm-rss</span>
+          <a class="go" href="https://www.woshipm.com/ai/6461603.html" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="act gen" data-id="0ee62bfd8921749e">生成摘要</button>
+        <button type="button" class="act play" data-id="0ee62bfd8921749e" aria-label="播放摘要">播放</button>
+      </div>
+    </article>
+    
+      
+      </div>
+    </section>
+    <aside>
+      <h3>信源健康</h3>
+      <p class="note">无官方 MCP。CLI 入口为 <code>python -m news_briefing</code>。直连失败的站点会退回 Google News 或页面解析。英文标题会尝试译成中文，并与原文双语展示。右侧可生成并朗读摘要。</p>
+      <table>
+        <thead><tr><th>信源</th><th>区</th><th>条</th><th>通道</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr class="ok">
+              <td>知乎</td>
+              <td>国内</td>
+              <td>40</td>
+              <td>google-news-rss</td>
+              <td>知乎热榜 API 需登录，改用 Google News site:zhihu.com。 query=AI OR 人工智能 OR 科技 OR 芯片 OR 财经 OR 股市 OR 健康 OR 医疗 OR 游戏 OR 电竞 OR 动漫 OR 动画</td>
+            </tr>
+<tr class="ok">
+              <td>微博</td>
+              <td>国内</td>
+              <td>40</td>
+              <td>google-news-rss</td>
+              <td>微博热搜接口被访客墙拦截，改用 Google News site:weibo.com。 query=AI OR 人工智能 OR 科技 OR 芯片 OR 财经 OR 股市 OR 健康 OR 医疗 OR 游戏 OR 电竞 OR 动漫 OR 动画</td>
+            </tr>
+<tr class="ok">
+              <td>虎嗅</td>
+              <td>国内</td>
+              <td>40</td>
+              <td>huxiu-nuxt+google-news</td>
+              <td>虎嗅首页未找到 NUXT 数据；query=AI OR 人工智能 OR 科技 OR 芯片 OR 财经 OR 股市 OR 健康 OR 医疗 OR 游戏 OR 电竞 OR 动漫 OR 动画</td>
+            </tr>
+<tr class="ok">
+              <td>人人都是产品经理</td>
+              <td>国内</td>
+              <td>21</td>
+              <td>woshipm-rss</td>
+              <td>RSS 15 条；AI 栏目补 6 条</td>
+            </tr>
+<tr class="ok">
+              <td>B站</td>
+              <td>国内</td>
+              <td>30</td>
+              <td>bilibili-api</td>
+              <td>B 站官方 popular/ranking 接口</td>
+            </tr>
+<tr class="ok">
+              <td>路透社</td>
+              <td>国外</td>
+              <td>40</td>
+              <td>google-news-rss</td>
+              <td>路透官网与官方 RSS 不可用，改用 Google News site:reuters.com。</td>
+            </tr>
+<tr class="ok">
+              <td>Medium</td>
+              <td>国外</td>
+              <td>40</td>
+              <td>medium-rss</td>
+              <td>Medium 官方 tag RSS</td>
+            </tr>
+<tr class="ok">
+              <td>X</td>
+              <td>国外</td>
+              <td>40</td>
+              <td>google-news-rss</td>
+              <td>X 无公开 CLI/MCP，使用 Google News 检索 x.com / twitter.com</td>
+            </tr>
+        </tbody>
+      </table>
+      <h3 style="margin-top:28px">Agent Loop</h3>
+      <ol class="loop">
+        <li>
+              <span class="phase">plan</span>
+              <span class="round">R1</span>
+              <span>本轮将拉取知乎、微博、虎嗅、人人都是产品经理、B站、路透、Medium、X；优先官方 API/RSS，失败再走抓取或 Google News。人人都是产品经理重点挖掘 AI 编程创意。</span>
+            </li>
+<li>
+              <span class="phase">observe</span>
+              <span class="round">R1</span>
+              <span>完成首轮抓取。</span>
+            </li>
+<li>
+              <span class="phase">think</span>
+              <span class="round">R2</span>
+              <span>覆盖已足够，停止补抓。</span>
+            </li>
+<li>
+              <span class="phase">select</span>
+              <span class="round">R3</span>
+              <span>选出当日 Top 10，并整理 AI 编程创意 10 条。</span>
+            </li>
+      </ol>
+    </aside>
+  </main>
+  <footer>
+    覆盖信源：路透社、人人都是产品经理、虎嗅、知乎、X、Medium、B站、微博。每次运行写入当日目录，并在 runs/ 下保留本次快照。
+  </footer>
+  <script id="item-data" type="application/json">{{"c0958d5486ccab16": {{"spoken_summary": "来自知乎的报道。标题：华为麒麟芯片简史。要点：华为麒麟芯片简史 知乎", "title_zh": "华为麒麟芯片简史", "title_en": "", "summary_zh": "华为麒麟芯片简史 知乎", "source_label": "知乎"}}, "8d850f2ba67b0796": {{"spoken_summary": "来自微博的报道。标题：小米 MiMo X ​。要点：小米 MiMo X ​ 微博", "title_zh": "小米 MiMo X ​", "title_en": "", "summary_zh": "小米 MiMo X ​ 微博", "source_label": "微博"}}, "689d08f86a2ff227": {{"spoken_summary": "来自虎嗅的报道。标题：高通与亚马逊合作开发AI推理芯片和1.6T光连接，打入全球云计算生态链。要点：高通与亚马逊合作开发AI推理芯片和1.6T光连接，打入全球云计算生态链 虎嗅网", "title_zh": "高通与亚马逊合作开发AI推理芯片和1.6T光连接，打入全球云计算生态链", "title_en": "", "summary_zh": "高通与亚马逊合作开发AI推理芯片和1.6T光连接，打入全球云计算生态链 虎嗅网", "source_label": "虎嗅"}}, "b254c8c79885ceb9": {{"spoken_summary": "来自人人都是产品经理的报道。标题：Codex重置的真正原因找到了，这套打法产品人都该学。要点：Codex频繁重置额度，表面是故障补偿，实则已成营销利器。五个月36次重置，六成与Bug无关，而是配合增长节点、竞品危机与个人IP造势。本文拆解Tibo如何将售后动作转化为事件营销，让每次重置都成为召回用户、推广功能、承接迁移的契机，揭示产品增长的新思路。 Codex为什么隔三差五就重置额度？。", "title_zh": "Codex重置的真正原因找到了，这套打法产品人都该学", "title_en": "", "summary_zh": "Codex频繁重置额度，表面是故障补偿，实则已成营销利器。五个月36次重置，六成与Bug无关，而是配合增长节点、竞品危机与个人IP造势。本文拆解Tibo如何将售后动作转化为事件营销，让每次重置都成为召回用户、推广功能、承接迁移的契机，揭示产品增长的新思路。 Codex为什么隔三差五就重置额度？ 最常见的解释是：产品出了故障，OpenAI把额度退给用户。Tibo在访谈中也是这么说的。他手里甚至真有一颗实体按钮，遇到Bug、体验不达标，就按一下作为补偿。 但我统计了今年4月至8月的公开记录，发现故障补偿只占四成。剩下六成，发生在用户量突破、新功能上线，或者T", "source_label": "人人都是产品经理"}}, "a964be557b43295f": {{"spoken_summary": "来自B站的报道。标题：【2026LPL第三赛段】9月8日 LGD vs IG。要点：【2026LPL第三赛段】9月8日 LGD vs IG", "title_zh": "【2026LPL第三赛段】9月8日 LGD vs IG", "title_en": "", "summary_zh": "【2026LPL第三赛段】9月8日 LGD vs IG", "source_label": "B站"}}, "1dec0876e331aab7": {{"spoken_summary": "来自X的报道。中文标题：这篇英文报道。英文标题：Radio 2 legend shares sad health update amid prostate cancer treatment: 'I was in tears' https://t.co/rx0cvVGQQq。英文要点：Radio 2 legend shares sad health update amid prostate cancer treatment: 'I was in tears' https://t.co/rx0cvVGQQq x.com", "title_zh": "Radio 2 legend shares sad health update amid prostate cancer treatment: 'I was in tears' https://t.co/rx0cvVGQQq", "title_en": "Radio 2 legend shares sad health update amid prostate cancer treatment: 'I was in tears' https://t.co/rx0cvVGQQq", "summary_zh": "", "source_label": "X"}}, "04646a7e8522395a": {{"spoken_summary": "来自Medium的报道。中文标题：这篇英文报道。英文标题：Hyperliquid. From Gas Token to Nasdaq。英文要点：How an Offshore Crypto Asset Got Legitimized Through America’s Stock Market Infrastructure Continue reading on Medium »", "title_zh": "Hyperliquid. From Gas Token to Nasdaq", "title_en": "Hyperliquid. From Gas Token to Nasdaq", "summary_zh": "", "source_label": "Medium"}}, "585132eb8591801d": {{"spoken_summary": "来自Medium的报道。中文标题：这篇英文报道。英文标题：Building FinRAG: Architecture, Retrieval Engineering, and Lessons from 500+ Active Users。英文要点：Just passed 500+ active users on FinRAG. Continue reading on Medium »", "title_zh": "Building FinRAG: Architecture, Retrieval Engineering, and Lessons from 500+ Active Users", "title_en": "Building FinRAG: Architecture, Retrieval Engineering, and Lessons from 500+ Active Users", "summary_zh": "", "source_label": "Medium"}}, "64151fa1e3c9a98f": {{"spoken_summary": "来自X的报道。中文标题：这篇英文报道。英文标题：Help your kids make healthy food choices at school. Fruits, vegetables, whole grains and water provide the nutrition they need to stay energized and focused in the classroom. Check out more #BackToSchool health tips here: https://t.co/hx5m6Dyngu。英文要点：Help your kids make healthy food choices at school. Fruits, vegetables, whole grains and water provide the nutrition。", "title_zh": "Help your kids make healthy food choices at school. Fruits, vegetables, whole grains and water provide the nutrition they need to stay energized and focused in the classroom. Check out more #BackToSchool health tips here: https://t.co/hx5m6Dyngu", "title_en": "Help your kids make healthy food choices at school. Fruits, vegetables, whole grains and water provide the nutrition they need to stay energized and focused in the classroom. Check out more #BackToSchool health tips here: https://t.co/hx5m6Dyngu", "summary_zh": "", "source_label": "X"}}, "6e1bdae103dc4790": {{"spoken_summary": "来自Medium的报道。中文标题：这篇英文报道。英文标题：Reclaim Your Health, Strength & Confidence。英文要点：Continue reading on Medium »", "title_zh": "Reclaim Your Health, Strength & Confidence", "title_en": "Reclaim Your Health, Strength & Confidence", "summary_zh": "", "source_label": "Medium"}}, "1bfeaaea520252f1": {{"spoken_summary": "来自人人都是产品经理的报道。标题：DeepSeek Harness 到底能干啥？六个玩法，从干活到好玩。要点：harness 不只是写代码，它把“写、跑、看、改”做成闭环。从十分钟搭网站、自动分析销售表，到跨文件追 bug、跑自动化任务，六个真实玩法展示了 AI 编程落地后的提效边界与适用场景。。", "title_zh": "DeepSeek Harness 到底能干啥？六个玩法，从干活到好玩", "title_en": "", "summary_zh": "harness 不只是写代码，它把“写、跑、看、改”做成闭环。从十分钟搭网站、自动分析销售表，到跨文件追 bug、跑自动化任务，六个真实玩法展示了 AI 编程落地后的提效边界与适用场景。 这篇不讲功能，讲能干出来的东西。六个玩法，从省半天活的实用派，到十分钟做个游戏的好玩派，都是我自己试过的。每个都说清楚：原来要多久、现在要多久、什么活适合扔给它。 01 十分钟搭个网站 这个是我自己的真实经历。 装好 harness 以后，我顺手让它给自己做了个介绍网站——就是讲讲它能干什么、有什么特性。原本以为怎么也得调半天，结果十分钟出来，UI 还挺好看。 harn", "source_label": "人人都是产品经理"}}, "8562318606801a43": {{"spoken_summary": "来自人人都是产品经理的报道。标题：DeepSeek突然上新！V4.1 Flash开启内测：新架构+原生多模态，直指V4 Pro？。要点：DeepSeek 又更新了。 今天下午，DeepSeek 在官方交流群宣布， DeepSeek V4.1 Flash 中间版本正式开启内测 。 按照官方给出的信息，这次 V4.1 Flash 并不是简单调参，而是 采用了新的模型结构 ，并且原生支持多模态。DeepSeek 对新模型的描述也非常直接：。", "title_zh": "DeepSeek突然上新！V4.1 Flash开启内测：新架构+原生多模态，直指V4 Pro？", "title_en": "", "summary_zh": "DeepSeek 又更新了。 今天下午，DeepSeek 在官方交流群宣布， DeepSeek V4.1 Flash 中间版本正式开启内测 。 按照官方给出的信息，这次 V4.1 Flash 并不是简单调参，而是 采用了新的模型结构 ，并且原生支持多模态。DeepSeek 对新模型的描述也非常直接： 能力更强、速度更快，同时成本更低。 目前开发者已经可以通过 API 抢先体验。 调用时无需修改原来的 base_url ，只需要把模型名称改为： deepseek-v4.1-flash-expires-on-0910 即可使用。 目前的 API 计费与 De", "source_label": "人人都是产品经理"}}, "7bb439baa59d5cb0": {{"spoken_summary": "来自人人都是产品经理的报道。标题：再这样下去，Agent要被卖保健品了。", "title_zh": "再这样下去，Agent要被卖保健品了", "title_en": "", "summary_zh": "", "source_label": "人人都是产品经理"}}, "aebe7c92eadfb202": {{"spoken_summary": "来自人人都是产品经理的报道。标题：小米MiMo Desktop开放邀测：腾讯、阿里、字节又多了一个对手。要点：刚刚，小米 MiMo 团队把 Xiaomi MiMo Desktop（下称 MiMo Desktop）的邀测闸门打开了，同时甩出两款新一代模型的预览版：MiMo-X-Pro-Preview 和。", "title_zh": "小米MiMo Desktop开放邀测：腾讯、阿里、字节又多了一个对手", "title_en": "", "summary_zh": "刚刚，小米 MiMo 团队把 Xiaomi MiMo Desktop（下称 MiMo Desktop）的邀测闸门打开了，同时甩出两款新一代模型的预览版：MiMo-X-Pro-Preview 和 MiMo-X-Flash-Preview。我最大的感受是——这次小米几乎没谈跑分，所有话术都压在”交付”两个字上。这其实是个信号：桌面 Agent 的竞争，正在从”答得对不对”转向”能不能把活干完”。 document.createElement('video'); https://www.woshipm.com/wp-content/uploads/2026/0", "source_label": "人人都是产品经理"}}, "ad9fdbb12315f28d": {{"spoken_summary": "来自人人都是产品经理的报道。标题：英伟达花 129 亿美元买下 Hugging Face，最值钱的是它背后的开发者网络。", "title_zh": "英伟达花 129 亿美元买下 Hugging Face，最值钱的是它背后的开发者网络", "title_en": "", "summary_zh": "", "source_label": "人人都是产品经理"}}, "c5f9e85b161250d1": {{"spoken_summary": "来自人人都是产品经理的报道。标题：生成速度跑赢播放速度，AI内容为何死磕“实时”门槛？。要点：AI视频生成速度首次超越播放速度，实时交互成为可能。从无限直播间到互动剧情游戏，内容生产逻辑正被改写。本文探讨技术突破背后的产品变革，以及质量、成本、安全等落地挑战，揭示AI视频从工具向实时媒介跃迁的关键节点。。", "title_zh": "生成速度跑赢播放速度，AI内容为何死磕“实时”门槛？", "title_en": "", "summary_zh": "AI视频生成速度首次超越播放速度，实时交互成为可能。从无限直播间到互动剧情游戏，内容生产逻辑正被改写。本文探讨技术突破背后的产品变革，以及质量、成本、安全等落地挑战，揭示AI视频从工具向实时媒介跃迁的关键节点。 过去两年，AI视频虽然迭代速度飞快，但生成模式都是一致的。用户输入提示词、提交任务、等待渲染，然后获得视频成片，行业最直观的进步，通常体现在画质、时长、人物一致性和声音同步上。 现在，这种大家习以为常的生产模式可能要发生变化了。不久前，X平台上冒出一个没有主播、没有节目单、也没有台本的直播间。上一秒还是六十年代风格的复古木偶广告，下一秒切到街头实", "source_label": "人人都是产品经理"}}, "3772e7887bc9fc31": {{"spoken_summary": "来自人人都是产品经理的报道。标题：一文读懂 HarmonyOS 7.0 带来的十大重要升级（一）。要点：HarmonyOS 7.0 正式发布，带来多项新特性，从 ArkUI 的文本选择增强到 ArkWeb 的模拟点击检测，再到音视频解码、相机原图获取等能力升级。本文结合《鸿蒙HarmonyOS 6应用开发》一书，逐一解析这些新特性，帮助开发者快速上手新版本。 HarmonyOS 7.0 已于 2026 年 9 月 7。", "title_zh": "一文读懂 HarmonyOS 7.0 带来的十大重要升级（一）", "title_en": "", "summary_zh": "HarmonyOS 7.0 正式发布，带来多项新特性，从 ArkUI 的文本选择增强到 ArkWeb 的模拟点击检测，再到音视频解码、相机原图获取等能力升级。本文结合《鸿蒙HarmonyOS 6应用开发》一书，逐一解析这些新特性，帮助开发者快速上手新版本。 HarmonyOS 7.0 已于 2026 年 9 月 7 日正式发布，该版本在 HarmonyOS 6.1 基础上增强了若干特性，让鸿蒙系统变得更智能更好用，下面结合《鸿蒙HarmonyOS 6应用开发:从零基础到App上线》一书对 HarmonyOS 7.0 新特性中的常用部分逐一讲解。这个系列文", "source_label": "人人都是产品经理"}}, "aa9c1c1d245ce51e": {{"spoken_summary": "来自人人都是产品经理的报道。标题：阿里前总参谋长曾鸣万字访谈总结，关于 AI 未来的 42 个判断。要点：AI 正在从工具层渗透到组织与协作方式，曾鸣教授关于 AI 产业三阶段与 Agent 应用爆发的判断，为创业者提供了观察变化的坐标。本文结合 GPT-6 Astra 的发布，梳理了从基础设施到完整任务的关键推演，帮助你在技术跃迁中守住真正的产品价值。 上周，我花了两个多小时看完张小珺对曾鸣教授的访谈。其中关于 AI。", "title_zh": "阿里前总参谋长曾鸣万字访谈总结，关于 AI 未来的 42 个判断", "title_en": "", "summary_zh": "AI 正在从工具层渗透到组织与协作方式，曾鸣教授关于 AI 产业三阶段与 Agent 应用爆发的判断，为创业者提供了观察变化的坐标。本文结合 GPT-6 Astra 的发布，梳理了从基础设施到完整任务的关键推演，帮助你在技术跃迁中守住真正的产品价值。 上周，我花了两个多小时看完张小珺对曾鸣教授的访谈。其中关于 AI 产业和未来组织的讨论，让我很有感触 最近，我们公司内部正在推进一个大型 AI 产品项目，核心团队只有五个人，其中两个产品、三个研发。项目很大，核心团队很小，周期比过去更短，沟通环节变少了，每个人承担的职责也在扩大。这不能证明未来所有 AI 项", "source_label": "人人都是产品经理"}}, "0ee62bfd8921749e": {{"spoken_summary": "来自人人都是产品经理的报道。标题：奥特曼、李飞飞、张一鸣齐押注，3D世界成AI竞赛新战场。要点：过去一周，OpenAI、Anthropic、World Labs与字节跳动密集发布可实时交互的3D空间方案。三条技术路线殊途同归：内容产业正转向可进入、可交互的空间，张一鸣也亲自下场协调资源。 生成式AI的竞争，正在从图片、短视频等平面内容，快速延伸到更具想象空间的三维世界。。", "title_zh": "奥特曼、李飞飞、张一鸣齐押注，3D世界成AI竞赛新战场", "title_en": "", "summary_zh": "过去一周，OpenAI、Anthropic、World Labs与字节跳动密集发布可实时交互的3D空间方案。三条技术路线殊途同归：内容产业正转向可进入、可交互的空间，张一鸣也亲自下场协调资源。 生成式AI的竞争，正在从图片、短视频等平面内容，快速延伸到更具想象空间的三维世界。 过去一周，四场重磅发布接连落地，三条技术底色完全不同的路线，不约而同在同一个方向上重兵集结——可实时交互的3D空间。 9月1日，Anthropic推出新一代旗舰Claude Fable 5.1，同一天李飞飞创办的 World Labs发布新一代原生世界模型Atlas。 9月3日，O", "source_label": "人人都是产品经理"}}}}</script>
+  <script>
+    const ITEMS = JSON.parse(document.getElementById("item-data").textContent || "{}");
+    const buttons = document.querySelectorAll(".filter");
+    const newsCards = document.querySelectorAll("#news-list .card");
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const cat = btn.dataset.cat;
+        newsCards.forEach((card) => {
+          card.style.display = (cat === "all" || card.dataset.category === cat) ? "" : "none";
+        });
+      });
+    });
+
+    let playingId = null;
+    function pickZhVoice() {
+      const voices = window.speechSynthesis ? window.speechSynthesis.getVoices() : [];
+      return voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("zh")) || null;
+    }
+    function spokenText(id) {
+      const item = ITEMS[id] || {};
+      return (item.spoken_summary || "").trim();
+    }
+    function revealSummary(card, id) {
+      const panel = card.querySelector(".spoken");
+      const text = spokenText(id);
+      panel.hidden = false;
+      panel.textContent = text || "暂无足够信息生成摘要。";
+      return text;
+    }
+    function stopSpeech(btn) {
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+      document.querySelectorAll(".act.play").forEach((el) => {
+        el.classList.remove("playing");
+        el.textContent = "播放";
+      });
+      playingId = null;
+      if (btn) {
+        btn.classList.remove("playing");
+        btn.textContent = "播放";
+      }
+    }
+    function sitePath(p) {
+      const path = location.pathname;
+      const dated = path.match(/^(.*)\/\d{4}-\d{2}-\d{2}(?:\/|$)/);
+      const root = dated ? dated[1] : path.replace(/\/index\.html$/i, "").replace(/\/$/, "");
+      return (root || "") + p;
+    }
+    async function ensureSummary(id) {
+      const existing = spokenText(id);
+      if (existing) return existing;
+      try {
+        const res = await fetch(sitePath("/api/summarize"), {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ id }),
+        });
+        if (!res.ok) return "";
+        const data = await res.json();
+        if (data && data.spoken_summary) {
+          ITEMS[id] = Object.assign(ITEMS[id] || {}, data);
+          return data.spoken_summary;
+        }
+      } catch (err) {
+        return "";
+      }
+      return "";
+    }
+    document.querySelectorAll(".act.gen").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const card = btn.closest(".card");
+        const id = btn.dataset.id;
+        btn.disabled = true;
+        btn.textContent = "生成中";
+        await ensureSummary(id);
+        revealSummary(card, id);
+        btn.disabled = false;
+        btn.textContent = "生成摘要";
+      });
+    });
+    document.querySelectorAll(".act.play").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const card = btn.closest(".card");
+        const id = btn.dataset.id;
+        if (playingId === id) {
+          stopSpeech(btn);
+          return;
+        }
+        stopSpeech();
+        await ensureSummary(id);
+        const text = revealSummary(card, id);
+        if (!text || !window.speechSynthesis) return;
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = "zh-CN";
+        utter.rate = 1;
+        const voice = pickZhVoice();
+        if (voice) utter.voice = voice;
+        utter.onend = () => stopSpeech(btn);
+        utter.onerror = () => stopSpeech(btn);
+        btn.classList.add("playing");
+        btn.textContent = "停止";
+        playingId = id;
+        window.speechSynthesis.speak(utter);
+      });
+    });
+    if (window.speechSynthesis) {
+      window.speechSynthesis.onvoiceschanged = pickZhVoice;
+    }
+  </script>
+</body>
+</html>
